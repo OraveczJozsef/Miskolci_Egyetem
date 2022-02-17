@@ -5,5 +5,5 @@
 ----
 ### Gyakorlatok
 > [1. Gyakorlat](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/1.%20Gyakorlat)\
-> [2. Gyakorlat]()\
+> [2. Gyakorlat](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/2.%20Gyakorlat)
 > 
