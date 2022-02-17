@@ -1,4 +1,4 @@
 # Egyetemi Git Hub
 ## Tantárgyak
-### Párhuzamos Algoritmusok
+### (Párhuzamos Algoritmusok)[www.google.com]
 ### Számítógépi Grafika
