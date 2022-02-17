@@ -1,7 +1,7 @@
 # 1. Gyakorlat [[Vissza](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok)]
 ## Feladatok
 > ***A circle példához hasonlóan készítendő el.***
-- 1. Feladat
+1. Feladat
      - [ ] *Készítsünk egy programot, amellyel téglatestek adatait lehet kezelni!*
      - [ ] *Definiáljunk egy struktúrát (például Cuboid vagy Brick néven), amely tartalmazza a téglatest 3 élének a hosszát!*
      - [ ] *Definiáljunk egy függvényt, amellyel ellenőrzött módon be lehet állítani egyszerre a 3 él hosszát (például set_size néven)!*
