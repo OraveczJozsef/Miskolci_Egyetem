@@ -8,6 +8,6 @@
 ### [Operációs Rendszerek](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Oper%C3%A1ci%C3%B3s%20Rendszerek) (II. Félév)
 
 ### [Adatbázisrendszerek I](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Adatb%C3%A1zisrendszerek%20I) (III. Félév)
-
+### ------------- [III. Félév] -------------
 ### [Párhuzamos Algoritmusok](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/P%C3%A1rhuzamos%20Algoritmusok) (IV. Félév)
 ### [Számítógépi Grafika](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika) (IV. Félév)
