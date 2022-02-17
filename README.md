@@ -1,1 +1,4 @@
-# ME_BRZGJZ
+# Egyetemi Git Hub
+## Tantárgyak
+### Párhuzamos Algoritmusok
+### Számítógépi Grafika
