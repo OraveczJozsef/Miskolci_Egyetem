@@ -9,11 +9,15 @@ int main(int argc, char** argv) {
     int number;
     
     srand(time(NULL));
+
     for(int i = 0; i < 10; i++){
-    number = randomInteger(0, 99999999);
-    formatInteger(number);
-    printf("%d\n", number);
+        number = randomInteger(0, 99999999);
+        
+        formatInteger(number);
+        printf("%d\n", number);
     }
+
+    return 0;
 }
 
 int randomInteger(int minimum, int maximum) {
