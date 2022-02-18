@@ -8,3 +8,6 @@
 > 2. Feladat
 > > - [x] ***Írjon egy programot, amelyik egész értékeket ír ki pontosan 8 karakter hosszan (jobbra igazítva)!***
 > > - [x] ***Oldja meg úgy, hogy szóközökkel, továbbá hogy 0 értékekkel van kitöltve a szám eleje (amennyiben szükséges kitölteni)!***
+----
+> 3. Feladat
+> > - [x] ***Készítsen példát a sleep függvény használatára!***
