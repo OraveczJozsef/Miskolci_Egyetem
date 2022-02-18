@@ -11,3 +11,10 @@
 ----
 > 3. Feladat
 > > - [x] ***Készítsen példát a sleep függvény használatára!***
+----
+> 4. Feladat
+> > - [x] ***Generáljon véletlenszámot az [500, 1000] intervallumon! (Oldja meg lebegőpontos és egész számok esetére is!)***
+----
+> 5. Feladat
+> > - [ ] ***Készítsen egy programot, amely a bemeneti argumentumként kapott két egész szám között (zárt intervallumon) generál egy szintén egész véletlen számot!***
+> > - [ ] ***Ellenőrízze az argumentumok számát, és jelezzen hibát, amennyiben nem megfelelőek!***
