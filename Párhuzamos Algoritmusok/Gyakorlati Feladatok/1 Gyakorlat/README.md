@@ -34,8 +34,8 @@
 > > - [x] ***Készítse el a függvényeket az adatok visszaolvasásához!***
 ----
 > 9. Feladat
-> > - [ ] ***Készítsen egy programot, amelyik a paraméterként vár egy fájlnevet és egy elemszámot (mint egész értéket).***
-> > - [ ] ***Ezek alapján hozza létre a program az adott fájlt véletlenszerű értékekkel kitöltve, a megfelelő elemszámmal!***
-> > - [ ] ***Mérje le a véletlenszámok generálásának sebességét az elemszám függvényében!***
-> > - [ ] ***Mérje le a fájl mentésének idejét az elemszám függvényében!***
-> > - [ ] ***Gyűjtse össze a kapott mérési adatokat táblázatba, és ábrázolja őket grafikonon!***
+> > - [x] ***Készítsen egy programot, amelyik a paraméterként vár egy fájlnevet és egy elemszámot (mint egész értéket).***
+> > - [x] ***Ezek alapján hozza létre a program az adott fájlt véletlenszerű értékekkel kitöltve, a megfelelő elemszámmal!***
+> > - [x] ***Mérje le a véletlenszámok generálásának sebességét az elemszám függvényében!***
+> > - [x] ***Mérje le a fájl mentésének idejét az elemszám függvényében!***
+> > - [x] ***Gyűjtse össze a kapott mérési adatokat táblázatba, és ábrázolja őket grafikonon!***
