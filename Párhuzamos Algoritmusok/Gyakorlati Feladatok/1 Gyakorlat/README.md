@@ -16,5 +16,5 @@
 > > - [x] ***Generáljon véletlenszámot az [500, 1000] intervallumon! (Oldja meg lebegőpontos és egész számok esetére is!)***
 ----
 > 5. Feladat
-> > - [ ] ***Készítsen egy programot, amely a bemeneti argumentumként kapott két egész szám között (zárt intervallumon) generál egy szintén egész véletlen számot!***
-> > - [ ] ***Ellenőrízze az argumentumok számát, és jelezzen hibát, amennyiben nem megfelelőek!***
+> > - [x] ***Készítsen egy programot, amely a bemeneti argumentumként kapott két egész szám között (zárt intervallumon) generál egy szintén egész véletlen számot!***
+> > - [x] ***Ellenőrízze az argumentumok számát, és jelezzen hibát, amennyiben nem megfelelőek!***
