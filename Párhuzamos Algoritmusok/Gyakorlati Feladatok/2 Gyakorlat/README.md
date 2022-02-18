@@ -1,20 +1,22 @@
 # 2 Gyakorlat
 ## Feladatok (*Mérések algoritmusok bonyolultságára vonatkozóan*)
 > 1. Feladat
-> > - [ ] ***Készítsen el egy programot, amellyel egy tömbben lévő számértékeket lehet beolvasni.***
-> > - [ ] ***Írjon egy függvényt az elemek összegének kiszámításához!***
-> > - [ ] ***Valósítsa meg a minimum és a maximum értékének a meghatározását külön függvényekben!***
-> > - [ ] ***Próbálja meg rekurzív függvényekkel is megoldani az előbbi számítási feladatokat!***
-> > - [ ] ***Mérje le, gyűjtse össze táblázatba és ábrázolja grafikonon az iteratív és a rekurzív változatok számítási idejét az elemszám függvényében!***
+> > - [x] ***Készítsen el egy programot, amellyel egy tömbben lévő számértékeket lehet beolvasni.***
+> > - [x] ***Írjon egy függvényt az elemek összegének kiszámításához!***
+> > - [x] ***Valósítsa meg a minimum és a maximum értékének a meghatározását külön függvényekben!***
+> > - [x] ***Próbálja meg rekurzív függvényekkel is megoldani az előbbi számítási feladatokat!***
+> > - [x] ***Mérje le, gyűjtse össze táblázatba és ábrázolja grafikonon az iteratív és a rekurzív változatok számítási idejét az elemszám függvényében!***
 > > - [ ] ***Adjon felső becslést a futási időre vonatkozóan! (T(n) = O(?))***
 ----
 > 2. Feladat
+> > - [ ] ***Generáljon egy tömböt úgy, hogy az elemek egész értékűek, és mindegyik különbözik!***
 > > - [ ] ***Vizsgálja meg a tömb generálásának számítási idejét az elemszám függvényében!***
 > > - [ ] ***0.5 valószínűséggel duplikáljon benne néhány elemet!***
 > > - [ ] ***Készítsen olyan függvényt, amely ellenőrzi, hogy a tömb minden eleme egyedi-e!***
 > > - [ ] ***Vizsgálja meg a függvény bonyolultságát!***
 ----
 > 3. Feladat
+> > - [ ] ***Generáljon egy tömböt, amelyben az elemek lebegőpontos értékek, és szigorúan monoton növekvő sorozatot alkotnak!***
 > > - [ ] ***Készítsen függvényt a tulajdonság ellenörzéséhez!***
 > > - [ ] ***Definiáljon egy függvényt, amely bináris kereséssel keres egy elemet a tömbben!***
 > > - [ ] ***Készítse el az iteratív és a rekurzív változatát!***
