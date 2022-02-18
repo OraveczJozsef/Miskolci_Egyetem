@@ -27,11 +27,11 @@
 > > - [x] ***Definiáljon egy függvényt, amely az [1, n] intervallumon meghatározza a prímszámok számát! Mérje le a futási időt az n = 1000, 2000, 3000, ..., 20000 értékeknél, és jelenítse meg grafikonon a kapott eredményeket (például Excel-el)!***
 ----
 > 8. Feladat
-> > - [ ] ***Írjon egy programot, amely egy tömbben lévő értékeket kiírja egy fájlba!***
-> > - [ ] ***A műveletet szervezze ki egy külön függvénybe!***
-> > - [ ] ***Készítse el int, long és float típusok esetére is (külön függvényekkel)!***
-> > - [ ] ***Kérdezze le, hogy az adott útvonalon lévő fájlnak mekkora a mérete!***
-> > - [ ] ***Készítse el a függvényeket az adatok visszaolvasásához!***
+> > - [x] ***Írjon egy programot, amely egy tömbben lévő értékeket kiírja egy fájlba!***
+> > - [x] ***A műveletet szervezze ki egy külön függvénybe!***
+> > - [x] ***Készítse el int, long és float típusok esetére is (külön függvényekkel)!***
+> > - [x] ***Kérdezze le, hogy az adott útvonalon lévő fájlnak mekkora a mérete!***
+> > - [x] ***Készítse el a függvényeket az adatok visszaolvasásához!***
 ----
 > 9. Feladat
 > > - [ ] ***Készítsen egy programot, amelyik a paraméterként vár egy fájlnevet és egy elemszámot (mint egész értéket).***
