@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
 
     if (argc != 3) {
         printf("[Error] Minimum 2 adatt kell!\n\n");
-        return 1;
+        exit(1);
     }
 
     aNumber = atoi(argv[1]);
