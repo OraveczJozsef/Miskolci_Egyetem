@@ -20,8 +20,8 @@
 > > - [x] ***Ellenőrízze az argumentumok számát, és jelezzen hibát, amennyiben nem megfelelőek!***
 ----
 > 6. Feladat
-> > - [ ] ***Írjon egy programot, amelyik 2 véletlenszerűen meghatározott pozitív egész szám értékét számoltatja ki a felhasználóval, és a szabványos bemeneten várja az eredményt!***
-> > - [ ] ***Ellenőrízze, hogy helyes az érték, és írja ki, hogy mennyi ideig tartott (másodpercben) a felhasználónak a számítás!***
+> > - [x] ***Írjon egy programot, amelyik 2 véletlenszerűen meghatározott pozitív egész szám értékét számoltatja ki a felhasználóval, és a szabványos bemeneten várja az eredményt!***
+> > - [x] ***Ellenőrízze, hogy helyes az érték, és írja ki, hogy mennyi ideig tartott (másodpercben) a felhasználónak a számítás!***
 ----
 > 7. Feladat
 > > - [ ] ***Definiáljon egy függvényt, amely az [1, n] intervallumon meghatározza a prímszámok számát! Mérje le a futási időt az n = 1000, 2000, 3000, ..., 20000 értékeknél, és jelenítse meg grafikonon a kapott eredményeket (például Excel-el)!***
