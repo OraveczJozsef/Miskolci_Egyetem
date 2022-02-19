@@ -1,4 +1,5 @@
 # Egyetemi Git Hub
+# Egyetemi Git Hub
 ## Tantárgyak
 ### I. Félév
 > [Programozás Alapjai](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Programoz%C3%A1s%20Alapjai) (I. Félév)\
