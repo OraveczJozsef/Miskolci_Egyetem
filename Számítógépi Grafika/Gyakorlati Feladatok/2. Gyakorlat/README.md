@@ -15,10 +15,10 @@
 > > - [x] ***Az egéresemények kezelésével rajzoljunk be egy + vagy x jelet azon körökbe, amely felett van éppen a kurzor. (Egyidejűleg több felett is lehet.)***
 > > - [x] ***Oldjuk meg, hogy a kirajzolt köröket az egér segítségével lehessen mozgatni!***
 > 3. Feladat (*Mátrixok, transzformációk*)
-> > - [ ] ***Nézzük át a Számítógépi grafika jegyzet 28. oldalától a koordináta transzformációkat!***
-> > - [ ] ***Töltsük le és nézzük át a matrices példát a grafika repository-ból!***
+> > - [x] ***Nézzük át a Számítógépi grafika jegyzet 28. oldalától a koordináta transzformációkat!***
+> > - [x] ***Töltsük le és nézzük át a matrices példát a grafika repository-ból!***
 > > - [ ] ***Végezzük el a kódban az alábbi bővítéseket!***
-> > - [ ] ***Definiáljunk egy init_identity_matrix függvényt, amelyik az egységmátrixot inicializálja!***
+> > > - [ ] ***Definiáljunk egy init_identity_matrix függvényt, amelyik az egységmátrixot inicializálja!***
 > > - [ ] ***Definiáljunk függvényt a mátrix skalárral való szorzásához!***
 > > - [ ] ***A multiply_matrices függvényben implementáljunk a mátrix szorzást!***
 > > - [ ] ***Definiáljuk a transform_point függvényt, amelyik egy síkbeli, homogén koordinátákkal adott pontra végzi el a paraméterben kapott mátrix által leírt transzformációt!***
