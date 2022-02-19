@@ -18,12 +18,12 @@
 > > - [x] ***Nézzük át a Számítógépi grafika jegyzet 28. oldalától a koordináta transzformációkat!***
 > > - [x] ***Töltsük le és nézzük át a matrices példát a grafika repository-ból!***
 > > - [ ] ***Végezzük el a kódban az alábbi bővítéseket!***
-> > > - [ ] ***Definiáljunk egy init_identity_matrix függvényt, amelyik az egységmátrixot inicializálja!***
-> > > - [ ] ***Definiáljunk függvényt a mátrix skalárral való szorzásához!***
-> > > - [ ] ***A multiply_matrices függvényben implementáljunk a mátrix szorzást!***
-> > > - [ ] ***Definiáljuk a transform_point függvényt, amelyik egy síkbeli, homogén koordinátákkal adott pontra végzi el a paraméterben kapott mátrix által leírt transzformációt!***
-> > > - [ ] ***Írjunk 3 függvényt a transzformációkhoz, amelyik módosítja az első paraméterében kapott transzformációs mátrixot! A függvények neve legyen scale, shift, rotate! A skálázás és a forgatás origó középpontú legyen!***
-> > > - [ ] ***Készítsünk példát minden elkészített függvény használatára vonatkozóan!***
+> > > - [x] ***Definiáljunk egy init_identity_matrix függvényt, amelyik az egységmátrixot inicializálja!***
+> > > - [x] ***Definiáljunk függvényt a mátrix skalárral való szorzásához!***
+> > > - [x] ***A multiply_matrices függvényben implementáljunk a mátrix szorzást!***
+> > > - [x] ***Definiáljuk a transform_point függvényt, amelyik egy síkbeli, homogén koordinátákkal adott pontra végzi el a paraméterben kapott mátrix által leírt transzformációt!***
+> > > - [x] ***Írjunk 3 függvényt a transzformációkhoz, amelyik módosítja az első paraméterében kapott transzformációs mátrixot! A függvények neve legyen scale, shift, rotate! A skálázás és a forgatás origó középpontú legyen!***
+> > > - [x] ***Készítsünk példát minden elkészített függvény használatára vonatkozóan!***
 > 4. Feladat (*Kiegészítő feladatok*)
 > > - [ ] ***Készítsünk egy verem struktúrát, amelynek az elemei transzformációs mátrixok!***
 > > - [ ] ***Valósítsuk meg a push_matrix és pop_matrix műveleteket!***
