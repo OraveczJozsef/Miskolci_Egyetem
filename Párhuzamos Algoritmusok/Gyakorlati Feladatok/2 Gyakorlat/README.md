@@ -9,11 +9,11 @@
 > > - [ ] ***Adjon felső becslést a futási időre vonatkozóan! (T(n) = O(?))***
 ----
 > 2. Feladat
-> > - [ ] ***Generáljon egy tömböt úgy, hogy az elemek egész értékűek, és mindegyik különbözik!***
-> > - [ ] ***Vizsgálja meg a tömb generálásának számítási idejét az elemszám függvényében!***
-> > - [ ] ***0.5 valószínűséggel duplikáljon benne néhány elemet!***
-> > - [ ] ***Készítsen olyan függvényt, amely ellenőrzi, hogy a tömb minden eleme egyedi-e!***
-> > - [ ] ***Vizsgálja meg a függvény bonyolultságát!***
+> > - [x] ***Generáljon egy tömböt úgy, hogy az elemek egész értékűek, és mindegyik különbözik!***
+> > - [x] ***Vizsgálja meg a tömb generálásának számítási idejét az elemszám függvényében!***
+> > - [x] ***0.5 valószínűséggel duplikáljon benne néhány elemet!***
+> > - [x] ***Készítsen olyan függvényt, amely ellenőrzi, hogy a tömb minden eleme egyedi-e!***
+> > - [x] ***Vizsgálja meg a függvény bonyolultságát!***
 ----
 > 3. Feladat
 > > - [ ] ***Generáljon egy tömböt, amelyben az elemek lebegőpontos értékek, és szigorúan monoton növekvő sorozatot alkotnak!***
