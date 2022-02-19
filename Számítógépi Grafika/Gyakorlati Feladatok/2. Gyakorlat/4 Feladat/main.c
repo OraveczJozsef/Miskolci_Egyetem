@@ -1,8 +1,6 @@
-#include <SDL2/SDL.h>
-
-#include <stdio.h>
+#include "header/matrix.h"
 
 int main(int argc, char** args) {
-    
+    MatrixVerem* vm;
     return 0;
 }
