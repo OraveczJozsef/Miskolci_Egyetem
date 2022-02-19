@@ -7,11 +7,8 @@ void makeRectangle(Rectangle* rectangle, int x, int y, int w, int h, int r, int 
     rec.w = w;
     rec.h = h;
 
-    Color color;
-    setColor(&color, r, g, b, a);
-    
+    setColor(&rectangle->color, r, g, b, a);
     rectangle->rectangle = rec;
-    rectangle->color = color;
 }
 
 bool isInSlot(int x, int y, int w, int h, int cx, int cy) {
