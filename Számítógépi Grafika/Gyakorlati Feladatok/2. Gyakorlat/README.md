@@ -7,13 +7,13 @@
 > > - [x] ***Készítsünk egy palettát, ahonnan kattintással kiválasztható az adott szakasz megjelenítéséhez használt színt!***
 > > - [x] ***Készítsünk egy olyan változatot, melyben a szakaszok helyett beszínezett téglalapok vannak!***
 > 2. Feladat (*Kör közelítése*)
-> > - [ ] ***Az examples/circle példában szereplő Circle struktúrát egészítsük ki egy szín attribútummal!***
+> > - [x] ***Az examples/circle példában szereplő Circle struktúrát egészítsük ki egy szín attribútummal!***
 > > - [ ] ***A szakasz kirajzolásához használt függvény segítségével készítsünk egy olyan programot, amely a körvonalat szakaszokkal közelíti!***
 > > - [ ] ***Vizsgáljuk meg azon eseteket, amikor a közelítést a felosztáshoz használt lépések számával, a lépések szögével illetve a kirajzolt szakaszok maximális hosszával adhatjuk meg!***
-> > - [ ] ***Készítsünk egy programot, amellyel különböző színű köröket lehet megjeleníteni!***
-> > - [ ] ***Oldjuk meg, hogy az egér segítségével új köröket is meg lehessen adni! (A számukat itt is maximalizálhatjuk, például egy MAX_CIRCLE_COUNT értékkel.)***
-> > - [ ] ***Az egéresemények kezelésével rajzoljunk be egy + vagy x jelet azon körökbe, amely felett van éppen a kurzor. (Egyidejűleg több felett is lehet.)***
-> > - [ ] ***Oldjuk meg, hogy a kirajzolt köröket az egér segítségével lehessen mozgatni!***
+> > - [x] ***Készítsünk egy programot, amellyel különböző színű köröket lehet megjeleníteni!***
+> > - [x] ***Oldjuk meg, hogy az egér segítségével új köröket is meg lehessen adni! (A számukat itt is maximalizálhatjuk, például egy MAX_CIRCLE_COUNT értékkel.)***
+> > - [x] ***Az egéresemények kezelésével rajzoljunk be egy + vagy x jelet azon körökbe, amely felett van éppen a kurzor. (Egyidejűleg több felett is lehet.)***
+> > - [x] ***Oldjuk meg, hogy a kirajzolt köröket az egér segítségével lehessen mozgatni!***
 > 3. Feladat (*Mátrixok, transzformációk*)
 > > - [ ] ***Nézzük át a Számítógépi grafika jegyzet 28. oldalától a koordináta transzformációkat!***
 > > - [ ] ***Töltsük le és nézzük át a matrices példát a grafika repository-ból!***
