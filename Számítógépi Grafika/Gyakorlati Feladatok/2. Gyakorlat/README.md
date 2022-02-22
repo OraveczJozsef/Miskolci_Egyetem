@@ -6,7 +6,7 @@
 > > - [x] ***Készítsünk egy szakasz rajzoló programot, amellyel egérkattintással lehet megadni a szakaszok végpontjait! (Feltételezzük, hogy legfeljebb MAX_LINE_COUNT számú szakasz tárolható és jeleníthető meg egyszerre.)***
 > > - [x] ***Készítsünk egy palettát, ahonnan kattintással kiválasztható az adott szakasz megjelenítéséhez használt színt!***
 > > - [x] ***Készítsünk egy olyan változatot, melyben a szakaszok helyett beszínezett téglalapok vannak!***\
-> **[2. Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/2.%20Gyakorlat/2%20Feladat)** (*Kör közelítése*)
+> [2. Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/2.%20Gyakorlat/2%20Feladat) (*Kör közelítése*)
 > > - [x] ***Az examples/circle példában szereplő Circle struktúrát egészítsük ki egy szín attribútummal!***
 > > - [ ] ***A szakasz kirajzolásához használt függvény segítségével készítsünk egy olyan programot, amely a körvonalat szakaszokkal közelíti!***
 > > - [ ] ***Vizsgáljuk meg azon eseteket, amikor a közelítést a felosztáshoz használt lépések számával, a lépések szögével illetve a kirajzolt szakaszok maximális hosszával adhatjuk meg!***
