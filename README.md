@@ -5,7 +5,7 @@
 ```
 ----
 
-## Iconok
+## Ikonok
 > ❌ - Hamarosan\
 > ✔️ - Kész\
 > 🛠 - Félkész\
