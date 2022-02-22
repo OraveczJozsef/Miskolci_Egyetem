@@ -13,8 +13,7 @@
 
 ## Tantárgyak
 ### I. Félév
-> [Programozás Alapjai](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Programoz%C3%A1s%20Alapjai) (I. Félév) [❌]\
-> [Számítógép Architektúrák](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9p%20Architekt%C3%BAr%C3%A1k) (I. Félév) [❌]
+> [Programozás Alapjai](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Programoz%C3%A1s%20Alapjai) (I. Félév) [❌]
 ----
 
 ### II. Félév
