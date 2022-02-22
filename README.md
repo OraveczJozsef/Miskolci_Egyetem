@@ -6,9 +6,9 @@
 ----
 
 ## Iconok
-> ❌ - Hamarosan
-> ✔️ - Kész
-> 🛠 - Félkész
+> ❌ - Hamarosan\
+> ✔️ - Kész\
+> 🛠 - Félkész\
 ----
 
 ## Tantárgyak
