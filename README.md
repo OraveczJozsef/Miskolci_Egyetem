@@ -1,6 +1,6 @@
 # Egyetemi Git Hub
+## Fontos
 ```diff
-@@Fontos@@
 ! Ha felhasználsz kódot / kódrészletet akkor kérlek tüntesd fel a nevem és a github linkemet.
 ```
 ## Tantárgyak
