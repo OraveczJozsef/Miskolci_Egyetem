@@ -1,7 +1,7 @@
 # Egyetemi Git Hub
 ## Fontos
 ```diff
-! Ha felhasználsz kódot / kódrészletet akkor kérlek tüntesd fel a nevem és a github linkemet!
+! Ha felhasználsz kódokat / kódrészletet, akkor kérlek tüntesd fel a nevem és a github linkemet!
 ```
 ----
 
