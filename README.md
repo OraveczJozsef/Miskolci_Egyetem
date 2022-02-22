@@ -8,7 +8,7 @@
 ## Ikonok
 > ❌ - Hamarosan\
 > ✔️ - Kész\
-> 🛠 - Félkész\
+> 🛠 - Félkész
 ----
 
 ## Tantárgyak
