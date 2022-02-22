@@ -1,11 +1,7 @@
 # Egyetemi Git Hub
-## Fontos
 ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+@@Fontos@@
+! Ha felhasználsz kódot / kódrészletet akkor kérlek tüntesd fel a nevem és a github linkemet.
 ```
 ## Tantárgyak
 ### I. Félév
