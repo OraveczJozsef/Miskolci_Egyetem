@@ -32,12 +32,18 @@
 
 ----
 ### Prefix számítás vizsgálata
-> - Tekintsük a prefix számítás esetében egységnyi idejűnek a  művelet elvégzését!
+> - *Tekintsük a prefix számítás esetében egységnyi idejűnek a  művelet elvégzését!*
 > 1. **[Feladat]()**
-> > - [ ] Készítsen egy programot, amely a CREW_PREFIX algoritmus végrehajtása során elvégzett hívásokat GraphViz segítségével egy hívási fában ábrázolja!
-> > - - [ ] A program a kimenetet egy szöveges fájl formájában adja meg!
-> > - - [ ] A megjelenítéshez használhat online gráf megjelenítőt, például: [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/)
-> > - - [ ] A csomópontokban tüntesse fel, hogy a hívás milyen intervallumra vonatkozott!
-> > - - [ ] Próbálja megoldani, hogy a program tetszőleges 'n' méretű bemenetre működjön!
+> > - [ ] ***Készítsen egy programot, amely a CREW_PREFIX algoritmus végrehajtása során elvégzett hívásokat GraphViz segítségével egy hívási fában ábrázolja!***
+> > - - [ ] ***A program a kimenetet egy szöveges fájl formájában adja meg!***
+> > - - [ ] ***A megjelenítéshez használhat online gráf megjelenítőt, például: [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/)***
+> > - - [ ] ***A csomópontokban tüntesse fel, hogy a hívás milyen intervallumra vonatkozott!***
+> > - - [ ] ***Próbálja megoldani, hogy a program tetszőleges 'n' méretű bemenetre működjön!***
+> 2. **[Feladat]()**
+> > - [ ] ***Az EREW_PREFIX algoritmus vizsgálatához készítsen egy programot, amellyel vizsgálható a párhuzamosan elvégzett számítások során a munka, költség, gyorsítás és a hatékonyság mértéke!***
+> > - - [ ] ***Egy szövegfájlba mentse le, hogy a számítások során a 't' időpillanatban mennyi számítási egység végzett éppen hasznos munkát! (Itt a sorok mutassák az időt, az oszlopok pedig, hogy melyik számítási egységről van szó! Jelölje '.' karakter, hogy ha nem történt hasznos számítás, '#' pedig hogy ha igen!)***
+> > - - [ ] ***Határozza meg az említett 'W', 'C', 'S' és 'E' értékeket 'n = 100' bemenetméretig!***
+> > - - [ ] ***Gyűjtse össze az adatokat egy táblázatba!***
+> > - - [ ] ***Ábrázolja grafikonon a bemenet függvényében a gyorsítás és a hatékonyság mértékét!***
 ----
 ### Hálózati topológiák
