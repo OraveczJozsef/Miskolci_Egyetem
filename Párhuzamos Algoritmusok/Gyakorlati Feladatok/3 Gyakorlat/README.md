@@ -12,13 +12,16 @@
 ----
 
 ### Algoritmusok párhuzamosítása
-> 1. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/2%20Gyakorlat/2%20Feladat) Készítsen egy programot, amely egy tömb elemeinek összegét számítja ki több szál felhasználásával!**
-> > - [ ] ***Oldja meg, hogy a program működjön tetszőleges méretű tömbökre is!***
-> > - [ ] ***Írjon egy programot, amely a tömböt közel egyenlő részekre oszt oldja meg az összegzést!***
-> > - [ ] ***Írjon egy programot, amely rekurzív felosztásra épül!***
-> > - [ ] ***A programban a szálak száma paraméterként szerepeljen!***
-> > - [ ] ***Hasonlítsa össze a '(p = 1)' esetet a szekvenciális változattal futási idő tekintetében!***
-> > - [ ] ***Mérje le a futási időket különböző 'p' értékek és különböző bemenetméretek mellett!***
-> > - [ ] ***Adjon becslést a 'T(n, p)' függvényre (ahol 'n' a bemeneti tömb mérete,  pedig a szálak száma).***
-> > - [ ] ***Adjon becslést a gyorsításra (mint 'S(p)' függvényre)!***
-> > - [ ] ***A kapott eredményeket foglalja össze táblázatban, és ábrázolja grafikonon!***
+> 1. **[Feladat]()**
+> > - [ ] ***Készítsen egy programot, amely egy tömb elemeinek összegét számítja ki több szál felhasználásával!***
+> > - - [ ] ***Oldja meg, hogy a program működjön tetszőleges méretű tömbökre is!***
+> > - - [ ] ***Írjon egy programot, amely a tömböt közel egyenlő részekre oszt oldja meg az összegzést!***
+> > - - [ ] ***Írjon egy programot, amely rekurzív felosztásra épül!***
+> > - - [ ] ***A programban a szálak száma paraméterként szerepeljen!***
+> > - - [ ] ***Hasonlítsa össze a '(p = 1)' esetet a szekvenciális változattal futási idő tekintetében!***
+> > - - [ ] ***Mérje le a futási időket különböző 'p' értékek és különböző bemenetméretek mellett!***
+> > - - [ ] ***Adjon becslést a 'T(n, p)' függvényre (ahol 'n' a bemeneti tömb mérete,  pedig a szálak száma).***
+> > - - [ ] ***Adjon becslést a gyorsításra (mint 'S(p)' függvényre)!***
+> > - - [ ] ***A kapott eredményeket foglalja össze táblázatban, és ábrázolja grafikonon!***
+----
+Készítsen olyan programokat, amelyek meghatározzák, hogy bizonyos tulajdonságú elemből mennyi található egy sorozatban. Ilyen tulajdonság lehet például, hogy
