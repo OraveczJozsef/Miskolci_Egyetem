@@ -45,11 +45,30 @@
 > > - - [ ] ***Határozza meg az említett 'W', 'C', 'S' és 'E' értékeket 'n = 100' bemenetméretig!***
 > > - - [ ] ***Gyűjtse össze az adatokat egy táblázatba!***
 > > - - [ ] ***Ábrázolja grafikonon a bemenet függvényében a gyorsítás és a hatékonyság mértékét!***
-> 1. **[Feladat]()**
+> 3. **[Feladat]()**
 > > - [ ] ***Vizsgálja meg az OPTIMAL_PREFIX algoritmus működését!***
 > > - - [ ] ***Írjon fel egy saját példát 'n = 16' bemenet esetére! Rajzolja fel az ehhez tartozó Gantt diagramot!***
 > > - - [ ] ***Ábrázolja grafikonon, hogy 'n' méretű bemenet esetén mennyi processzorra van szükség a számításhoz!***
 > > - - [ ] ***Karakter tömb segítségével ábrázolja (például fájlba kimentve), hogy a 't' időegységben végzett-e hasznos számítást a 'p' processzor!***
 > > - - [ ] ***Határozza meg az említett 'W', 'C', 'S' és 'E' értékeket 'n = 100' bemenetméretig!***
+
 ----
 ### Hálózati topológiák
+> 1. **[Feladat]()**
+> > - [ ] ***Négyzetes rács topológia esetén végezze el a következő számításokat!***
+> > - - [ ] ***Számítsa ki 'n = 50'-ig, hogy egy 'n x n' méretű rácsban mennyi csomópont és él van!***
+> > - - [ ] ***Határozza meg ezek arányát 'n' függvényében, és ábrázolja a kapott eredményt grafikonon!***
+> > - - [ ] ***Egy '12 x 12'-es méretű rács esetében határozza meg a pontok közötti távolságok eloszlását!***
+> > - - [ ] ***Ábrázolja a kapott eredményt hisztogramon!***
+> > - - [ ] ***Vizsgálja meg, hogy 'n = 24'-ig térbeli rács esetében hogyan változik a csomópontok és élek száma!***
+> > - - [ ] ***Hasonlítsa össze, hogy 'n' függvényében hogyan alakul az élek száma síkbeli és térbeli rácsok esetében!***
+> > - - [ ] ***Számítsa ki a csomópontok közötti távolságok eloszlását egy  méretű térrácsban!***
+> 2. **[Feladat]()**
+> > - [ ] ***Végezze el az előbbi számításokat tórusz topológia esetében!***
+> 3. **[Feladat]()**
+> > - [ ] ***Végezzen számításokat hiperkocka topológia esetében!***
+> > - - [ ] ***Számítsa ki, hogy 30 dimenzióig hogyan változik a csomópontok és az élek száma!***
+> > - - [ ] ***Határozza meg 8 dimenzióban a csomópontok közötti távolságok eloszlását!***
+> > - - [ ] ***Ábrázolja a kapott eredményt hisztogramon!***
+> > - - [ ] ***Számítsa ki 20 dimenzióig az átlagos távolságokat!***
+> > - - [ ] ***Hasonlítsa össze ezeket a csomópontok száma alapján a síkbeli és térbeli rács topológiákkal!***
