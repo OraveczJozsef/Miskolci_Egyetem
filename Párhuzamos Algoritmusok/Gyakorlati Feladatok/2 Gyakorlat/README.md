@@ -15,13 +15,13 @@
 > > - [x] ***Készítsen olyan függvényt, amely ellenőrzi, hogy a tömb minden eleme egyedi-e!***
 > > - [x] ***Vizsgálja meg a függvény bonyolultságát!***
 > 3. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/2%20Gyakorlat/Mérések%20algoritmusok/3%20Feladat)**
-> > - [ ] ***Generáljon egy tömböt, amelyben az elemek lebegőpontos értékek, és szigorúan monoton növekvő sorozatot alkotnak!***
-> > - [ ] ***Készítsen függvényt a tulajdonság ellenörzéséhez!***
-> > - [ ] ***Definiáljon egy függvényt, amely bináris kereséssel keres egy elemet a tömbben!***
-> > - [ ] ***Készítse el az iteratív és a rekurzív változatát!***
-> > - [ ] ***Véletlenszerűen kiválasztott és/vagy generált értékek keresése alapján mérje le a számítási idők eloszlását (adott elemszám mellett)!***
-> > - [ ] ***Hasonlítsa össze az iteratív és a rekurzív változat futási idejét az elemszám függvényében!***
-> > - [ ] ***Ábrázolja az egyes elemszámokhoz tartozó futási idők maximumát!***
+> > - [x] ***Generáljon egy tömböt, amelyben az elemek lebegőpontos értékek, és szigorúan monoton növekvő sorozatot alkotnak!***
+> > - [x] ***Készítsen függvényt a tulajdonság ellenörzéséhez!***
+> > - [x] ***Definiáljon egy függvényt, amely bináris kereséssel keres egy elemet a tömbben!***
+> > - - [x] ***Készítse el az iteratív és a rekurzív változatát!***
+> > - [x] ***Véletlenszerűen kiválasztott és/vagy generált értékek keresése alapján mérje le a számítási idők eloszlását (adott elemszám mellett)!***
+> > - [x] ***Hasonlítsa össze az iteratív és a rekurzív változat futási idejét az elemszám függvényében!***
+> > - [x] ***Ábrázolja az egyes elemszámokhoz tartozó futási idők maximumát!***
 > 4. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/2%20Gyakorlat/Mérések%20algoritmusok/4%20Feladat)**
 > > - [ ] ***Generáljon egy szöveges fájlt az angol ábécé kis és nagy betűiből, számjegyekből, szóközökből és sortörésekből véletlenszerűen!***
 > > - [ ] ***A generáláshoz paraméterként használja a generálandó karakterek számát!***
