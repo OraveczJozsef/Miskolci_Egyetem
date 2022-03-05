@@ -22,7 +22,6 @@
 > > - [ ] ***Adjon becslést a 'T(n, p)' függvényre (ahol 'n' a bemeneti tömb mérete,  pedig a szálak száma).***
 > > - [ ] ***Adjon becslést a gyorsításra (mint 'S(p)' függvényre)!***
 > > - [ ] ***A kapott eredményeket foglalja össze táblázatban, és ábrázolja grafikonon!***
-----
 > 2. **[Feladat]() Készítsen olyan programokat, amelyek meghatározzák, hogy bizonyos tulajdonságú elemből mennyi található egy sorozatban. Ilyen tulajdonság lehet például, hogy...**
 > > - [ ] ***egész értékek esetén páros vagy páratlan számok-e,***
 > > - [ ] ***0 értékűek-e,***
@@ -36,8 +35,7 @@
 > > - - *Mérje le a futási időket a bemenet méretének és a szálak számának függvényében!*
 > > - - *Összesítse a kapott eredményeket táblázatos formában!*
 > > - - *Ábrázolja az eredményeket grafikonok!*
-----
-> 2. **[Feladat]() Készítsen programot egy tömb prefixeinek a kiszámításához!**
+> 3. **[Feladat]() Készítsen programot egy tömb prefixeinek a kiszámításához!**
 > > - [ ] ***Adja meg a szekvenciális változatot!***
 > > - [ ] ***Implementálja a CREW_PREFIX algoritmust!***
 > > - [ ] ***Implementálja az EREW_PREFIX algoritmust!***
