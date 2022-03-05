@@ -45,5 +45,11 @@
 > > - - [ ] ***Határozza meg az említett 'W', 'C', 'S' és 'E' értékeket 'n = 100' bemenetméretig!***
 > > - - [ ] ***Gyűjtse össze az adatokat egy táblázatba!***
 > > - - [ ] ***Ábrázolja grafikonon a bemenet függvényében a gyorsítás és a hatékonyság mértékét!***
+> 1. **[Feladat]()**
+> > - [ ] ***Vizsgálja meg az OPTIMAL_PREFIX algoritmus működését!***
+> > - - [ ] ***Írjon fel egy saját példát 'n = 16' bemenet esetére! Rajzolja fel az ehhez tartozó Gantt diagramot!***
+> > - - [ ] ***Ábrázolja grafikonon, hogy 'n' méretű bemenet esetén mennyi processzorra van szükség a számításhoz!***
+> > - - [ ] ***Karakter tömb segítségével ábrázolja (például fájlba kimentve), hogy a 't' időegységben végzett-e hasznos számítást a 'p' processzor!***
+> > - - [ ] ***Határozza meg az említett 'W', 'C', 'S' és 'E' értékeket 'n = 100' bemenetméretig!***
 ----
 ### Hálózati topológiák
