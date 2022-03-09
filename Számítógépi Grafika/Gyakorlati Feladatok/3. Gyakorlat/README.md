@@ -1,6 +1,6 @@
-# 3. Gyakorlat [[Vissza]()]
+# 3. Gyakorlat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok)]
 ## Feladatok
-> 1. **[Feladat]()**
+> 1. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/3.%20Gyakorlat/1%20Feladat)**
 > > - [x] ***Töltsük le és nézzük át a pong példát a grafika repository-ból!***
 > > - [x] ***Változtassuk meg a labda sebességét!***
 > > - [x] ***Javítsuk ki a programot, hogy csak akkor ütközzön vissza a labda bal és jobb oldalt, ha ott van az ütő alatta!***
