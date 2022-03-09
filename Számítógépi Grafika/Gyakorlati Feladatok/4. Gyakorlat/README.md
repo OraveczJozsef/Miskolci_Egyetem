@@ -1,6 +1,6 @@
-# 4. Gyakorlat [[Vissza](https://github.com/OraveczJozsef/ME_BRZGJZ/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok)]
+# 4. Gyakorlat [[Vissza]()]
 ## Feladatok
-> 1. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/4.%20Gyakorlat/1%20Feladat)**
+> 1. **[Feladat]()**
 > > - [x] ***Töltsük le és nézzük át a 'origin' példát az 'me-courses' repository-ból, majd végezzük el az alábbi módosításokat!***
 > > - [x] ***Oldjuk meg, hogy a kamerát függőlegesen is lehessen mozgatni felfelé és lefelé 'q' és 'e' billentyűk segítségével!***
 > > - [x] ***Állítsuk be a 'j' és 'l' billentyűkre a kamera balra és jobbra forgatását!***

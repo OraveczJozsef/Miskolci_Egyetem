@@ -1,1 +1,5 @@
-# Programozás Alapjai [[Vissza](https://github.com/OraveczJozsef/ME_BRZGJZ)]
+# Programozás Alapjai [[Vissza]()]
+
+## Zh-k [[Itt]()]
+## Gyakorlati Feladatok [[Itt]()]
+## Szorgalmi Feladatok [[Itt]()]
