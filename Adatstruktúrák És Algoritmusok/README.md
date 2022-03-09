@@ -1,1 +1,1 @@
-# Adatstruktúrák És Algoritmusok [[Vissza](https://github.com/OraveczJozsef/ME_BRZGJZ)]
+# Adatstruktúrák És Algoritmusok [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem)]

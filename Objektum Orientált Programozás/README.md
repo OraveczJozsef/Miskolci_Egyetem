@@ -1,1 +1,1 @@
-# Objektum Orientált Programozás [[Vissza](https://github.com/OraveczJozsef/ME_BRZGJZ)]
+# Objektum Orientált Programozás [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem)]

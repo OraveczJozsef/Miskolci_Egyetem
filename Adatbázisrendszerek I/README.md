@@ -1,1 +1,1 @@
-# Adatbázisrendszerek I. [[Vissza](https://github.com/OraveczJozsef/ME_BRZGJZ)]
+# Adatbázisrendszerek I. [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem)]
