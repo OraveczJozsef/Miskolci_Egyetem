@@ -39,4 +39,8 @@ void draw_triangles();
  */
 void draw_circle(float center_x, float center_y, float center_z, float radius, int segments);
 
+/**
+ * 
+ */
+void draw();
 #endif /* SCENE_H */
