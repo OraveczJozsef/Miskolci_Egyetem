@@ -8,5 +8,5 @@
 > > - [ ] ***Jelenítsünk meg egy szürke (tesszellált) gömböt az egységkockán belül!***
 > > - [ ] ***Válasszuk kicsire a tesszelláció mértékét, és forgassuk meg a gömböt egyenletes sebességgel valamelyik tengely körül!***
 > > - [ ] ***Írjuk át a kamera kezelését úgy, hogy a Google Maps-hez hasonlóan lehessen forgatni a nézetet!***
-> > - [ ] ***Rajzoljunk ki egy sakktábla mintát az egységkockánk x-y síkjába (ahol z értéke 0)!***
+> > - [x] ***Rajzoljunk ki egy sakktábla mintát az egységkockánk x-y síkjába (ahol z értéke 0)!***
 > > - [ ] ***Rajzoljuk ki egy henger és egy kúp közelítését! Használjuk hozzá a triangle strip és triangle fan primitíveket!***
