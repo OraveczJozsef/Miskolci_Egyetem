@@ -7,7 +7,8 @@
 > > - ***Használja fel ezt a listát a monotonitás vizsgálathoz.***
 ----
 > 2. **[Feladat]()**
-> > - [ ] **Az egyetemi hallgatóknak félévente 6 vizsgájuk van.**
+> > - [] **Írjon C programot, amely beolvassa egy hallgató vizsgajegyeit és eltárolja egy tömbben, kiszámítja a tanulmányi átlagot és kiírja az ösztöndíj havi összegét.**
+> > - ***Az egyetemi hallgatóknak félévente 6 vizsgájuk van.***
 > > - ***Félév végén az elért tanulmányi átlag alapján ki szeretnénk számolni a hallgató ösztöndíját a következő félévre:***
 > > - - ***3,5 alatt 0 Ft/hó,***
 > > - - ***3,6 - 4,0 között 5e Ft/hó***
