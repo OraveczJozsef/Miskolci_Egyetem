@@ -2,12 +2,12 @@
 
 ## Blender
 > ***A modellek szerkesztéséhez Blender-t értdemes használni: https://www.blender.org/***\
-> ***A modell exportálásánál figyelni kell arra, hogy***\
+> ***A modellek előkészítéséről és használatáról itt található egy videó: https://www.uni-miskolc.hu/~matip/_downloads/grafika/animals.ogv***\
+> ***A modell exportálásánál figyelni kell arra, hogy***
 > - ***a modell csak háromszögeket tartalmazzon (Triangle faces kapcsoló),***
 > - ***a felfele irány megfelelően legyen megadva (általában Z szokott lenni),***
 > - ***a modell a normálvektorokat és a textúrakoordinátákat is tartalmazza (ez alapértelmezés szerint jól van),***
 > - ***csak a kijelölt vagy az összes objektumot el kell-e menteni (részemről inkább a kijelöltre hagyatkozom).***\
-> ***A modellek előkészítéséről és használatáról itt található egy videó: https://www.uni-miskolc.hu/~matip/_downloads/grafika/animals.ogv***
 
 ## Statikus Library 
 > **[OBJ loader statikus library használata](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/5.%20Gyakorlat/utils/obj)**
