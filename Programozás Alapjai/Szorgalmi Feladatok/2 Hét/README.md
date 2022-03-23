@@ -21,9 +21,3 @@
 > > - ***Ugyanezt oldja meg valós (double típusú) számokkal is.***
 > > - ***Az osztási maradék kiszámításához használja a math.h double fmod(double, double) függvényét!***
 ----
-
-
-4. Írjon C programot, amely beolvas két egész számot, és kiírja az osztás eredményét
-az alábbi formában: osztandó / osztó = hányados, maradék x.
-Ugyanezt oldja meg valós (double típusú) számokkal is.
-Az osztási maradék kiszámításához használja a math.h double fmod(double, double) függvényét!
