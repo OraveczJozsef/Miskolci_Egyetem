@@ -1,10 +1,10 @@
 # 5. Gyakorlat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok)]
 ## Info
 > **OBJ loader statikus library használata**
-> > ***Keressük meg az me-courses repository-ban a utils nevű mappát!***/
-> > ***A statikus library a utils/obj jegyzékben van.***/
-> > ***Lépjünk be a jegyzékbe, és adjuk ki a make parancsot.***/
-> > ***Létre fog jönni egy libobj.a fájl. Ezt másoljuk be a fordító lib jegyzékébe.***/
+> > ***Keressük meg az me-courses repository-ban a utils nevű mappát!***\
+> > ***A statikus library a utils/obj jegyzékben van.***\
+> > ***Lépjünk be a jegyzékbe, és adjuk ki a make parancsot.***\
+> > ***Létre fog jönni egy libobj.a fájl. Ezt másoljuk be a fordító lib jegyzékébe.***\
 > > ***A utils/obj/include jegyzékben lévő header fájlokat másoljuk be a fordító include/obj nevű jegyzékébe. (Az obj nevű jegyzék nem létezik, azt létre kell hozni.)***
 
 ## Feladatok
