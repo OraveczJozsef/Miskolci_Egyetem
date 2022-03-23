@@ -72,7 +72,7 @@
 ----
 
 ### 1. C kód
-```c
+```
 BE: magasság
 sor := 1
 
@@ -96,7 +96,7 @@ AMÍG sor <= magasság ADDIG
 CIKLUS vége
 ```
 ### 2. C kód
-```c
+```
 BE: magasság
 sor := 1
 
