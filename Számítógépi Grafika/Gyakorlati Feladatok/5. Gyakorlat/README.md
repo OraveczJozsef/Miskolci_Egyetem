@@ -1,8 +1,8 @@
 # 5. Gyakorlat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok)]
 
 ## Blender
-> ***A modellek szerkesztéséhez Blender-t értdemes használni: [Itt](https://www.blender.org/)***\
-> ***A modellek előkészítéséről és használatáról itt található egy videó: [Itt](https://www.uni-miskolc.hu/~matip/_downloads/grafika/animals.ogv)***\
+> ***A modellek szerkesztéséhez Blender-t értdemes használni: [Blender](https://www.blender.org/)***\
+> ***A modellek előkészítéséről és használatáról itt található egy videó: [Video](https://www.uni-miskolc.hu/~matip/_downloads/grafika/animals.ogv)***\
 > ***A modell exportálásánál figyelni kell arra, hogy***
 > - ***a modell csak háromszögeket tartalmazzon (Triangle faces kapcsoló),***
 > - ***a felfele irány megfelelően legyen megadva (általában Z szokott lenni),***
@@ -24,7 +24,7 @@
 > > - [ ] ***Rajzoljuk ki ugyanazt a modellt egy 4x4-es rácsba!***
 > > - [ ] ***Töltsünk be egyszerre két modellt, és az egyiket forgassuk!***
 > > - [ ] ***Töltsünk be egyszerre két modellt, és az egyiket lehessen mozgatni egér és/vagy billentyűk segítségével!***
-> > - [ ] ***Próbáljuk meg betölteni és megjeleníteni a https://www.uni-miskolc.hu/~matip/_downloads/grafika címre feltöltött mozelleket!***
+> > - [ ] ***Próbáljuk meg betölteni és megjeleníteni a [Modellek](https://www.uni-miskolc.hu/~matip/_downloads/grafika) címre feltöltött mozelleket!***
 > > - [ ] ***Nézzük meg, hogy a modell adatai hogyan kerülnek tárolásra az OBJ fájlokban!***
 > > - [ ] ***Módosítsuk a megjelenített modell színét és pozícióját!***
 > > - [ ] ***Töltsük be és jelenítsük meg egyszerre a kocka és a ház modelljét!***
