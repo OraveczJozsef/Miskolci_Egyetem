@@ -30,7 +30,7 @@
 ----
 
 ### 1. C kód
-```c
+```
 CIKLUSBAN
     1. A számítógép sorsol egy 1-100 közötti számot.
 
