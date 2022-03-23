@@ -1,6 +1,6 @@
 # 5. Gyakorlat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok)]
 ## Info
-> **OBJ loader statikus library használata**
+> **[OBJ loader statikus library használata](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/5.%20Gyakorlat/utils/obj)**
 > > ***Keressük meg az me-courses repository-ban a utils nevű mappát!***\
 > > ***A statikus library a utils/obj jegyzékben van.***\
 > > ***Lépjünk be a jegyzékbe, és adjuk ki a make parancsot.***\
