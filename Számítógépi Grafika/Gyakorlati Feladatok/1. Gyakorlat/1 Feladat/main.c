@@ -10,9 +10,9 @@ int main(int argc, char** args) {
 
     setRectangleSize(&rectangle, 12.1, 13.7, 12.1);
 
-    rectangleVolume = getRectangleVolume(rectangle);
-    rectangleSurface = getRectangleSurface(rectangle);
-    rectangleSquare = isSquare(rectangle);
+    rectangleVolume = calcRectangleVolume(&rectangle);
+    rectangleSurface = calcRectangleSurface(&rectangle);
+    rectangleSquare = isSquare(&rectangle);
 
     printf("Volume: %lf\nSurface: %lf\nSquare: %s\n", rectangleVolume, rectangleSurface, (rectangleSquare ? "Yes" : "No"));
 
