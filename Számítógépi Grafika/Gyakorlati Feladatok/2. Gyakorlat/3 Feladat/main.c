@@ -41,39 +41,24 @@ int main(int argc, char** args) {
 
     init_identity_matrix(aM);
     print_matrix(aM);
-    printf("\n");
-    printf("\n");
 
     print_matrix(bM);
-    printf("\n");
     matrixScalarMultiplication(bM, 9.8);
     print_matrix(bM);
-    printf("\n");
-    printf("\n");
 
     multiply_matrices(aM, bM, cM);
     print_matrix(cM);
-    printf("\n");
-    printf("\n");
 
     print_matrix(m);
-    printf("\n");
-    printf("\n");
 
     scale(m, 8);
     print_matrix(m);
-    printf("\n");
-    printf("\n");
 
     shift(m, vs);
     print_matrix(m);
-    printf("\n");
-    printf("\n");
 
     rotate(m, 90.0);
     print_matrix(m);
-    printf("\n");
-    printf("\n");
 
     pointTransformation(m, ve, vr);
     printf("%lf, %lf, %lf\n", vr[0], vr[1], vr[2]);
