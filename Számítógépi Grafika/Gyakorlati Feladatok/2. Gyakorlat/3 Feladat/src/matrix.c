@@ -21,6 +21,9 @@ void print_matrix(const float matrix[3][3]) {
         }
         printf("\n");
     }
+    
+    printf("\n");
+    printf("\n");
 }
 
 void add_matrices(const float a[3][3], const float b[3][3], float c[3][3]) {
