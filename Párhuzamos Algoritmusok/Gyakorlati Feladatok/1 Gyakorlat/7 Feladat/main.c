@@ -2,179 +2,84 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define TICK(X) clock_t X = clock()
-#define TOCK(X) printf("Eltelt ido: %g sec.\n", (double)(clock() - (X)) / CLOCKS_PER_SEC)
+#define ARRAY_SIZE 20
 
-void primeNumbers(int number);
+int rand_integer(int minimum, int maximum);
+void tick_tock(clock_t time);
+//void print_prime_number(int number);
+void count_primes(int number);
 
 int main(int argc, char** argv) {
-    int i = 0;
-    int intArray[] = {1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000};
+    int i = 7;
+    clock_t time = clock();
+    int intArray[ARRAY_SIZE];
 
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_0);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_0);
-    i++;
-    printf("\n");
-    
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_1);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_1);
-    i++;
-    printf("\n");
+    //for (i = 0; i < ARRAY_SIZE; i++) {
+        intArray[i] = (i+1) * 1000;
+        printf("%d\n", intArray[i]);
+    //}
 
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_2);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_2);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_3);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_3);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_4);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_4);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_5);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_5);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_6);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_6);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_7);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_7);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_8);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_8);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_9);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_9);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_10);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_10);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_11);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_11);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_12);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_12);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_13);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_13);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_14);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_14);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_15);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_15);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_16);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_16);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_17);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_17);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_18);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_18);
-    i++;
-    printf("\n");
-
-    printf("%d - ig a primszamok:\n", intArray[i]);
-    TICK(TIME_19);
-    primeNumbers(intArray[i]);
-    TOCK(TIME_19);
-    i++;
-    printf("\n");
+    //for (i = 0; i < ARRAY_SIZE; i++) {
+        time = clock();
+        //print_prime_number(intArray[i]);
+        count_primes(intArray[i]);
+        tick_tock(time);
+    //}
 
     return 0;
 }
 
-void primeNumbers(int number) {
-    int i, c;
-    int a = 1;
+int rand_integer(int minimum, int maximum) {
+    return (rand() % (maximum-minimum+1)) + 1;
+}
 
-    while (a <= number) {
+void tick_tock(clock_t time) {
+    printf("Eltelt ido: %g sec.\n", (double)(clock() - (time)) / CLOCKS_PER_SEC);
+}
+
+/*void print_prime_number(int number) {
+    int j = 1, i = 1, c = 0;
+
+    while (i < number) {
+        j = 1;
         c = 0;
-        i = 2;
 
-        while (i <= a/2) {
-            if (a % i == 0) {
+        while (j <= i) {
+            if (i % j == 0) {
                 c++;
-                break;
             }
-            i++;
+
+            j++;
         }
 
-        if (c == 0 && a != 1) {
-            printf("%d|", a);
+        if (c == 2) {
+            printf("%d | ", i);
         }
 
-        a++;
+        i++;
     }
-    printf("\n\n");
+}*/
+void count_primes(int number) {
+    int j = 1, i = 1, c = 0;
+    int count = 0;
+    while (i < number) {
+        j = 1;
+        c = 0;
+
+        while (j <= i) {
+            if (i % j == 0) {
+                c++;
+            }
+
+            j++;
+        }
+
+        if (c == 2) {
+            count++;
+        }
+
+        i++;
+    }
+
+    printf("%d - %d \n", number, count);
 }
