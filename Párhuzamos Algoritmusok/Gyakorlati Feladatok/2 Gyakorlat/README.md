@@ -34,7 +34,7 @@
 ### Prefix számítás vizsgálata
 > - *Tekintsük a prefix számítás esetében egységnyi idejűnek a  művelet elvégzését!*
 > 1. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/2%20Gyakorlat/Prefix%20sz%C3%A1m%C3%ADt%C3%A1s/1%20Feladat)**
-> > - [ ] ***Készítsen egy programot, amely a CREW_PREFIX algoritmus végrehajtása során elvégzett hívásokat GraphViz segítségével egy hívási fában ábrázolja!***
+> > - [x] ***Készítsen egy programot, amely a CREW_PREFIX algoritmus végrehajtása során elvégzett hívásokat GraphViz segítségével egy hívási fában ábrázolja!***
 > > - - [ ] ***A program a kimenetet egy szöveges fájl formájában adja meg!***
 > > - - [ ] ***A megjelenítéshez használhat online gráf megjelenítőt, például: [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/)***
 > > - - [ ] ***A csomópontokban tüntesse fel, hogy a hívás milyen intervallumra vonatkozott!***
@@ -56,13 +56,13 @@
 ### Hálózati topológiák
 > 1. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/2%20Gyakorlat/H%C3%A1l%C3%B3zati%20topol%C3%B3gi%C3%A1k/1%20Feladat)**
 > > - [ ] ***Négyzetes rács topológia esetén végezze el a következő számításokat!***
-> > - - [ ] ***Számítsa ki 'n = 50'-ig, hogy egy 'n x n' méretű rácsban mennyi csomópont és él van!***
+> > - - [x] ***Számítsa ki 'n = 50'-ig, hogy egy 'n x n' méretű rácsban mennyi csomópont és él van!***
 > > - - [ ] ***Határozza meg ezek arányát 'n' függvényében, és ábrázolja a kapott eredményt grafikonon!***
 > > - - [ ] ***Egy '12 x 12'-es méretű rács esetében határozza meg a pontok közötti távolságok eloszlását!***
 > > - - [ ] ***Ábrázolja a kapott eredményt hisztogramon!***
 > > - - [ ] ***Vizsgálja meg, hogy 'n = 24'-ig térbeli rács esetében hogyan változik a csomópontok és élek száma!***
 > > - - [ ] ***Hasonlítsa össze, hogy 'n' függvényében hogyan alakul az élek száma síkbeli és térbeli rácsok esetében!***
-> > - - [ ] ***Számítsa ki a csomópontok közötti távolságok eloszlását egy  méretű térrácsban!***
+> > - - [ ] ***Számítsa ki a csomópontok közötti távolságok eloszlását egy 5 x 5 x 5 méretű térrácsban!***
 > 2. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/2%20Gyakorlat/H%C3%A1l%C3%B3zati%20topol%C3%B3gi%C3%A1k/2%20Feladat)**
 > > - [ ] ***Végezze el az előbbi számításokat tórusz topológia esetében!***
 > 3. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/2%20Gyakorlat/H%C3%A1l%C3%B3zati%20topol%C3%B3gi%C3%A1k/3%20Feladat)**
