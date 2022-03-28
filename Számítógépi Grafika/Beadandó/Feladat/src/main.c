@@ -1,21 +1,13 @@
-#include "app.h"
+#include "../include/main.h"
 
-#include <stdio.h>
+int main(int argc, char** argv) {
+    Application application;
 
-/**
- * Main function
- */
-int main(int argc, char* argv[])
-{
-    App app;
+    init_application(&application, 800, 900);
 
-    init_app(&app, 800, 600);
-    while (app.is_running) {
-        handle_app_events(&app);
-        update_app(&app);
-        render_app(&app);
+    while (application.running) {
+
     }
-    destroy_app(&app);
 
     return 0;
 }
