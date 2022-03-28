@@ -1,2 +1,2 @@
 all:
-	gcc main.c -lm -o main.exe
+	gcc src/main.c src/random.c -lm -o main.exe
