@@ -23,13 +23,18 @@ void init_scene(Scene* scene)
     scene->material.specular.blue = 0.0;
 
     scene->material.shininess = 0.0;
+
 }
 
 void set_lighting()
 {
+    // kornyezeti
     float ambient_light[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+    // szort feny
     float diffuse_light[] = { 1.0f, 1.0f, 1.0, 1.0f };
+    // csillogas
     float specular_light[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+    // position
     float position[] = { 0.0f, 0.0f, 10.0f, 1.0f };
 
     glLightfv(GL_LIGHT0, GL_AMBIENT, ambient_light);
@@ -77,12 +82,18 @@ void render_scene(const Scene* scene)
 
     draw_origin();
 
-    draw_model(&(scene->cube));
-    //draw_model(&(scene->hare));
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    // Fireplace
+    glPushMatrix();
+        glTranslatef(0.0f, 0.0f, 1.0f);
+        glRotatef(90, 1.0f, 0.0f, 0.0f);
+
+        draw_model(&(scene->cube));
+    glPopMatrix();
 }
 
-void draw_origin()
-{
+void draw_origin() {
     glBegin(GL_LINES);
 
     glColor3f(1, 0, 0);
