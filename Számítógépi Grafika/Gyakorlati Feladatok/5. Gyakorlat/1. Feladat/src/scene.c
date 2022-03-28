@@ -5,10 +5,12 @@
 
 void init_scene(Scene* scene)
 {
-    load_model(&(scene->cube), "assets/models/cube.obj");
-    scene->texture_id = load_texture("assets/textures/cube.png");
+    //load_model(&(scene->cube), "assets/models/cube.obj");
+    //scene->cube_texture_id = load_texture("assets/textures/cube.png");
+    load_model(&(scene->cube), "assets/models/hare.obj");
+    scene->cube_texture_id = load_texture("assets/textures/Tile2sml.jpg");
 
-    glBindTexture(GL_TEXTURE_2D, scene->texture_id);
+    glBindTexture(GL_TEXTURE_2D, scene->cube_texture_id);
 
     scene->material.ambient.red = 0.0;
     scene->material.ambient.green = 0.0;
@@ -23,6 +25,9 @@ void init_scene(Scene* scene)
     scene->material.specular.blue = 0.0;
 
     scene->material.shininess = 0.0;
+
+    //load_model(&(scene->hare), "assets/models/hare.obj");
+    //scene->hare_texture_id = load_texture("assets/textures/hare.jpg");
 }
 
 void set_lighting()
@@ -67,14 +72,18 @@ void set_material(const Material* material)
 
 void update_scene(Scene* scene)
 {
+    
 }
 
 void render_scene(const Scene* scene)
 {
     set_material(&(scene->material));
     set_lighting();
+
     draw_origin();
+
     draw_model(&(scene->cube));
+    //draw_model(&(scene->hare));
 }
 
 void draw_origin()

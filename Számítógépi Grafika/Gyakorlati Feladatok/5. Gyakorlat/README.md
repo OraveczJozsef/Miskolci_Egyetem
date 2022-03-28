@@ -20,7 +20,7 @@
 ## Feladatok
 > 1. **[Feladat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika/Gyakorlati%20Feladatok/5.%20Gyakorlat/1%20Feladat)**
 > > - [x] ***Fordítsuk le és futtassuk a cube nevű példaprogramot!***
-> > - [ ] ***Próbáljuk kicserélni benne a modellt!***
+> > - [x] ***Próbáljuk kicserélni benne a modellt!***
 > > - [ ] ***Rajzoljuk ki ugyanazt a modellt egy 4x4-es rácsba!***
 > > - [ ] ***Töltsünk be egyszerre két modellt, és az egyiket forgassuk!***
 > > - [ ] ***Töltsünk be egyszerre két modellt, és az egyiket lehessen mozgatni egér és/vagy billentyűk segítségével!***
