@@ -1,31 +1,51 @@
-#define _OPEN_THREADS
-#include <pthread.h>
-#include <stdlib.h>
 #include <stdio.h>
-void *thread(void *arg) {
-  char *ret;
-  printf("thread() entered with argument '%s'\n", arg);
-  if ((ret = (char*) malloc(20)) == NULL) {
-    perror("malloc() error");
-    exit(2);
+#include <stdlib.h>
+#include <time.h>
+
+#include <windows.h>
+
+#include <unistd.h>
+
+#include <pthread.h>
+
+const int N_THREADS = 20;
+
+void *wait_random_time(void* _);
+int random_integer(int minimum, int maximum);
+
+int main() {
+  pthread_t threads[N_THREADS];
+  int i;
+
+  srand(time(NULL));
+
+  printf("[Main] Start ...\n");
+  for (i = 0; i < N_THREADS; i++) {
+    pthread_create(&threads[i], NULL, wait_random_time, NULL);
   }
-  strcpy(ret, "This is a test");
-  pthread_exit(ret);
+
+  printf("[Main] Join ...\n");
+  for (i = 0; i < N_THREADS; i++) {
+    pthread_join(threads[i], NULL);
+  }
+
+  printf("[Main] Ready ...");
+  return 0;
 }
 
-main() {
-  pthread_t thid;
-  void *ret;
+void *wait_random_time(void* _) {
+  pthread_t tid;
+  int wait_time;
 
-  if (pthread_create(&thid, NULL, thread, "thread 1") != 0) {
-    perror("pthread_create() error");
-    exit(1);
-  }
+  tid = pthread_self();
+  wait_time = 8;//random_integer(1, 10);
 
-  if (pthread_join(thid, &ret) != 0) {
-    perror("pthread_create() error");
-    exit(3);
-  }
+  printf("[%d] Wait %d sec ...\n", tid, wait_time);
+  printf("%d\n", wait_time);
+  Sleep(wait_time * 1000);
+  printf("[%d] Ready!\n", tid);
+}
 
-  printf("thread exited with '%s'\n", ret);
+int random_integer(int minimum, int maximum) {
+    return (rand() % (maximum-minimum+1)) + 1;
 }
