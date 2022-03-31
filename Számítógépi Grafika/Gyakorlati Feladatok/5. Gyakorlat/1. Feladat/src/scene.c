@@ -23,6 +23,8 @@ void init_scene(Scene* scene)
     scene->material.specular.blue = 0.0;
 
     scene->material.shininess = 0.0;
+
+    scene->angle = 0;
 }
 
 void set_lighting()
@@ -65,9 +67,9 @@ void set_material(const Material* material)
     glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, &(material->shininess));
 }
 
-void update_scene(Scene* scene)
+void update_scene(Scene* scene, double time)
 {
-    
+    scene->angle += time * 5;
 }
 
 void render_scene(const Scene* scene)
@@ -77,8 +79,10 @@ void render_scene(const Scene* scene)
 
     draw_origin();
 
-    draw_model(&(scene->cube));
-    //draw_model(&(scene->hare));
+    glPushMatrix();
+        glRotatef(scene->angle, 1.0f, 0.0f, 0.0f);
+        draw_model(&(scene->cube));
+    glPopMatrix();
 }
 
 void draw_origin()
