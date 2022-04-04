@@ -61,4 +61,6 @@ void set_camera_side_speed(Camera* camera, double speed);
  */
 void set_camera_multiplier(Camera* camera, double multiplier);
 
+
+void show_texture_preview();
 #endif /* CAMERA_H */
