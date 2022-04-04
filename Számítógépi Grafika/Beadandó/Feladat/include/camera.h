@@ -3,6 +3,9 @@
 
 #include "utils.h"
 
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 /**
@@ -13,13 +16,20 @@ typedef struct Camera
     vec3 position;
     vec3 rotation;
     vec3 speed;
+    
+    double multiplier;
+
     bool is_preview_visible;
+
+    Collisions collisions[5];
 } Camera;
 
 /**
  * Initialize the camera to the start position.
  */
 void init_camera(Camera* camera);
+
+void init_collision(Camera* camera);
 
 /**
  * Update the position of the camera.
@@ -45,5 +55,10 @@ void set_camera_speed(Camera* camera, double speed);
  * Set the speed of left and right side steps.
  */
 void set_camera_side_speed(Camera* camera, double speed);
+
+/**
+ * Set the camera speed all side.
+ */
+void set_camera_multiplier(Camera* camera, double multiplier);
 
 #endif /* CAMERA_H */
