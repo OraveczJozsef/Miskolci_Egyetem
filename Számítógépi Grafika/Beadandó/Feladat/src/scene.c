@@ -13,7 +13,7 @@ void init_scene(Scene* scene) {
     scene->models_used = 0;
     scene->models = malloc(scene->models_size * sizeof(Models));
 
-    scene->light_size = 0;
+    scene->light_size = 1;
     scene->light_used = 0;
     scene->lights = malloc(scene->models_size * sizeof(Light));
 
