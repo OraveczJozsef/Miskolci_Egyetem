@@ -7,6 +7,7 @@
 #include <SDL2/SDL.h>
 
 #include <stdbool.h>
+#include <string.h>
 
 #define VIEWPORT_RATIO (4.0 / 3.0)
 #define VIEWPORT_ASPECT 50.0
@@ -15,8 +16,11 @@ typedef struct App
 {
     SDL_Window* window;
     SDL_GLContext gl_context;
+
     bool is_running;
+    bool is_dev_mode;
     double uptime;
+
     Camera camera;
     Scene scene;
 } App;
