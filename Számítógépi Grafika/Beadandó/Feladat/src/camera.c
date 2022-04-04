@@ -64,10 +64,8 @@ void update_camera(Camera* camera, double time) {
         !is_coolision(new_x, new_y, camera->collisions[2].x, camera->collisions[2].y, camera->collisions[2].w, camera->collisions[2].h) && 
         !is_coolision(new_x, new_y, camera->collisions[3].x, camera->collisions[3].y, camera->collisions[3].w, camera->collisions[3].h)
     ) {
-         return;
+        return;
     }
-
-
 
     camera->position.x += (cos(angle) * camera->speed.y + cos(side_angle) * camera->speed.x) * time * camera->multiplier;
     camera->position.y += (sin(angle) * camera->speed.y + sin(side_angle) * camera->speed.x) * time * camera->multiplier;
