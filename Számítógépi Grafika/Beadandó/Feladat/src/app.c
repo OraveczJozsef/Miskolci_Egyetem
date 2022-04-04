@@ -2,8 +2,7 @@
 
 #include <SDL2/SDL_image.h>
 
-void init_app(App* app, int width, int height)
-{
+void init_app(App* app, int width, int height) {
     int error_code;
     int inited_loaders;
 
@@ -15,11 +14,7 @@ void init_app(App* app, int width, int height)
         return;
     }
 
-    app->window = SDL_CreateWindow(
-        "Cube!",
-        SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-        width, height,
-        SDL_WINDOW_OPENGL);
+    app->window = SDL_CreateWindow("Cube!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
     if (app->window == NULL) {
         printf("[ERROR] Unable to create the application window!\n");
         return;
@@ -43,11 +38,11 @@ void init_app(App* app, int width, int height)
     init_camera(&(app->camera));
     init_scene(&(app->scene));
 
+    app->scene.is_dev_mode = app->is_dev_mode;
     app->is_running = true;
 }
 
-void init_opengl()
-{
+void init_opengl() {
     glShadeModel(GL_SMOOTH);
 
     glEnable(GL_NORMALIZE);
@@ -66,10 +61,16 @@ void init_opengl()
 
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
+    glEnable(GL_LIGHT1);
+    glEnable(GL_LIGHT2);
+    glEnable(GL_LIGHT3);
+    glEnable(GL_LIGHT4);
+    glEnable(GL_LIGHT5);
+    glEnable(GL_LIGHT6);
+    glEnable(GL_LIGHT7);
 }
 
-void reshape(GLsizei width, GLsizei height)
-{
+void reshape(GLsizei width, GLsizei height) {
     int x, y, w, h;
     double ratio;
 
@@ -93,12 +94,12 @@ void reshape(GLsizei width, GLsizei height)
     glFrustum(
         -.08, .08,
         -.06, .06,
-        .1, 10
+        .1, 100000000
     );
+    // 100000000 látotáv
 }
 
-void handle_app_events(App* app)
-{
+void handle_app_events(App* app) {
     SDL_Event event;
     static bool is_mouse_down = false;
     static int mouse_x = 0;
@@ -108,66 +109,93 @@ void handle_app_events(App* app)
 
     while (SDL_PollEvent(&event)) {
         switch (event.type) {
-        case SDL_KEYDOWN:
-            switch (event.key.keysym.scancode) {
-            case SDL_SCANCODE_ESCAPE:
+            case SDL_KEYDOWN:
+                switch (event.key.keysym.scancode) {
+                    case SDL_SCANCODE_ESCAPE:
+                        app->is_running = false;
+                        break;
+                    case SDL_SCANCODE_W:
+                        set_camera_speed(&(app->camera), 1);
+                        break;
+                    case SDL_SCANCODE_S:
+                        set_camera_speed(&(app->camera), -1);
+                        break;
+                    case SDL_SCANCODE_A:
+                        set_camera_side_speed(&(app->camera), 1);
+                        break;
+                    case SDL_SCANCODE_D:
+                        set_camera_side_speed(&(app->camera), -1);
+                        break;
+                    case SDL_SCANCODE_LSHIFT:
+                        set_camera_multiplier(&(app->camera), 3.0f);
+                        break;
+                    case SDL_SCANCODE_LCTRL:
+                        set_camera_multiplier(&(app->camera), 0.5f);
+                        break;
+                    case SDL_SCANCODE_KP_PLUS:
+                        set_light_speed(&(app->scene.lights[1]), 0.5);
+                        set_light_speed(&(app->scene.lights[2]), 0.5);
+                        break;
+                    case SDL_SCANCODE_KP_MINUS:
+                        set_light_speed(&(app->scene.lights[1]), -0.5);
+                        set_light_speed(&(app->scene.lights[2]), -0.5);
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case SDL_KEYUP:
+                switch (event.key.keysym.scancode) {
+                    case SDL_SCANCODE_W:
+                    case SDL_SCANCODE_S:
+                        set_camera_speed(&(app->camera), 0);
+                        break;
+                    case SDL_SCANCODE_A:
+                    case SDL_SCANCODE_D:
+                        set_camera_side_speed(&(app->camera), 0);
+                        break;
+                    case SDL_SCANCODE_LSHIFT:
+                    case SDL_SCANCODE_LCTRL:
+                        set_camera_multiplier(&(app->camera), 1);
+                        break;
+                    case SDL_SCANCODE_KP_PLUS:
+                    case SDL_SCANCODE_KP_MINUS:
+                        set_light_speed(&(app->scene.lights[1]), 0.0);
+                        set_light_speed(&(app->scene.lights[2]), 0.0);
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case SDL_MOUSEBUTTONDOWN:
+                if (event.button.button == SDL_BUTTON_RIGHT && app->is_dev_mode) {
+                    printf("Camera Pos: %f - %f - %f\n", app->camera.position.x, app->camera.position.y, app->camera.position.z);
+                    printf("Camera Rot: %f - %f - %f\n", app->camera.rotation.x, app->camera.rotation.y, app->camera.rotation.z);
+                } else {
+                    is_mouse_down = true;
+                }
+                break;
+            case SDL_MOUSEMOTION:
+                SDL_GetMouseState(&x, &y);
+                if (is_mouse_down) {
+                    rotate_camera(&(app->camera), mouse_x - x, mouse_y - y);
+                }
+                mouse_x = x;
+                mouse_y = y;
+                break;
+            case SDL_MOUSEBUTTONUP:
+                is_mouse_down = false;
+                break;
+            case SDL_QUIT:
                 app->is_running = false;
                 break;
-            case SDL_SCANCODE_W:
-                set_camera_speed(&(app->camera), 1);
-                break;
-            case SDL_SCANCODE_S:
-                set_camera_speed(&(app->camera), -1);
-                break;
-            case SDL_SCANCODE_A:
-                set_camera_side_speed(&(app->camera), 1);
-                break;
-            case SDL_SCANCODE_D:
-                set_camera_side_speed(&(app->camera), -1);
-                break;
             default:
                 break;
-            }
-            break;
-        case SDL_KEYUP:
-            switch (event.key.keysym.scancode) {
-            case SDL_SCANCODE_W:
-            case SDL_SCANCODE_S:
-                set_camera_speed(&(app->camera), 0);
-                break;
-            case SDL_SCANCODE_A:
-            case SDL_SCANCODE_D:
-                set_camera_side_speed(&(app->camera), 0);
-                break;
-            default:
-                break;
-            }
-            break;
-        case SDL_MOUSEBUTTONDOWN:
-            is_mouse_down = true;
-            break;
-        case SDL_MOUSEMOTION:
-            SDL_GetMouseState(&x, &y);
-            if (is_mouse_down) {
-                rotate_camera(&(app->camera), mouse_x - x, mouse_y - y);
-            }
-            mouse_x = x;
-            mouse_y = y;
-            break;
-        case SDL_MOUSEBUTTONUP:
-            is_mouse_down = false;
-            break;
-        case SDL_QUIT:
-            app->is_running = false;
-            break;
-        default:
-            break;
         }
     }
 }
 
-void update_app(App* app)
-{
+void update_app(App* app) {
     double current_time;
     double elapsed_time;
 
@@ -176,17 +204,16 @@ void update_app(App* app)
     app->uptime = current_time;
 
     update_camera(&(app->camera), elapsed_time);
-    update_scene(&(app->scene));
+    update_scene(&(app->scene), elapsed_time);
 }
 
-void render_app(App* app)
-{
+void render_app(App* app) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
 
     glPushMatrix();
-    set_view(&(app->camera));
-    render_scene(&(app->scene));
+        set_view(&(app->camera));
+        render_scene(&(app->scene));
     glPopMatrix();
 
     if (app->camera.is_preview_visible) {
@@ -196,8 +223,7 @@ void render_app(App* app)
     SDL_GL_SwapWindow(app->window);
 }
 
-void destroy_app(App* app)
-{
+void destroy_app(App* app) {
     if (app->gl_context != NULL) {
         SDL_GL_DeleteContext(app->gl_context);
     }
