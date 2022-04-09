@@ -1,14 +1,21 @@
 # Féléves feladat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika)]
 
+## Felhasznnált publikációk
+### Modellek:
+> - Kandarlo: [Itt](https://www.turbosquid.com/3d-models/free-fireplace-3d-model/983390)
+
+## Feladat leírás:
+
+
 ## Minimális elvárások az elkészített programmal szemben
 
 > - ***Az elkészített programnak jól strukturáltnak, következetesnek kell lennie. Törekedni kell arra, hogy a modellek, a kezelés kidolgozott, a megjelenítés esztétikus legyen. Ezek a minimális elvárások a programmal szemben. Amennyiben ezek teljesülnek, úgy a feladat már elégséges.***
 
-> - [ ] **Kamerakezelés:** *A virtuális teret az egér és/vagy billentyűzet segítségével be kell tudni járni.*
-> - [ ] **Objektumok:** *Térbeli objektumok legyenek. Ezeket, mint modelleket külön fájlból lehessen betölteni.*
+> - [x] **Kamerakezelés:** *A virtuális teret az egér és/vagy billentyűzet segítségével be kell tudni járni.*
+> - [x] **Objektumok:** *Térbeli objektumok legyenek. Ezeket, mint modelleket külön fájlból lehessen betölteni.*
 > - [ ] **Animáció, mozgatás:** *A program legyen interaktív. A modelleket, fényeket billentyűzettel, egérrel lehessen mozgatni; legyenek animált részek.*
-> - [ ] **Textúrák:** *A modelleknek legyen textúrája.*
-> - [ ] **Fények:** *A programban a fényeket a + és - billentyűk segítségével lehessen állítani (vagy egyéb kézenfekvő módon a program leírása alapján).*
+> - [x] **Textúrák:** *A modelleknek legyen textúrája.*
+> - [x] **Fények:** *A programban a fényeket a + és - billentyűk segítségével lehessen állítani (vagy egyéb kézenfekvő módon a program leírása alapján).*
 > - [ ] **Használati útmutató:** *Az F1 gomb megnyomására (vagy egyéb kézenfekvő módon) jelenjen megy egy leírás a programról, annak használatáról, kezelési módjáról.*
 
 ## Többlet funkciók
@@ -20,9 +27,9 @@
 > - [ ] **Részecskerendszerek:** *Például Tűz, füst, eső, hóesés.*
 > - [ ] **AI:** *Táblás játékok esetén kézenfekvő, egyéb játékoknál ellenfelek vezérlése például.*
 > - [ ] **Köd:** *Köd hatás megvalósítása, dinamikus változtatása.*
-> - [ ] **Átlátszóság:** *Átlátszó részeket tartalmazó textúrák alkalmazása, félig áttetsző részek a megjelenített objektumokon.*
+> - [x] **Átlátszóság:** *Átlátszó részeket tartalmazó textúrák alkalmazása, félig áttetsző részek a megjelenített objektumokon.*
 > - [ ] **Árnyék:** *Árnyékszerű hatások létrehozása.*
-> - [ ] **Ütközésvizsgálat:** *Bounding-box implementáció valamilyen formája.*
+> - [x] **Ütközésvizsgálat:** *Bounding-box implementáció valamilyen formája.*
 > - [ ] **Stencil buffer használata:** *Nem téglalap alakú képterületek megvalósításához.*
 > - [ ] **Felhasználói felület:** *A paraméterek állításához külön felületi elemek.*
 > - [ ] **Objektumok kijelölése egérrel:** *A megjelenített objektumok kijelölése.*
