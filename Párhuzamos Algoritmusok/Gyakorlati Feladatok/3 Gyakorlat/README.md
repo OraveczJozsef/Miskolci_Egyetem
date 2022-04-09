@@ -2,12 +2,10 @@
 ## Feladatok
 ### POSIX szálak
 > 1. **[Feldat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/3%20Gyakorlat/POSIX%20sz%C3%A1lak/1%20Feladat)**
-> > - [ ] ***Készítsünk olyan programot, amelynél a fő szál 8 másodpercnyi számítást végez el, míg az általa indított csak 4-et! Vizsgáljuk meg a fordított esetet is!***
+> > - [x] ***Készítsünk olyan programot, amelynél a fő szál 8 másodpercnyi számítást végez el, míg az általa indított csak 4-et! Vizsgáljuk meg a fordított esetet is!***
 > 2. **[Feldat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/3%20Gyakorlat/POSIX%20sz%C3%A1lak/2%20Feladat)**
-> > - [ ] ***Készítsünk olyan programot, amelynél a fő szál 8 másodpercnyi számítást végez el, míg az általa indított csak 4-et! Vizsgáljuk meg a fordított esetet is!***
-> 3. **[Feldat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/3%20Gyakorlat/POSIX%20sz%C3%A1lak/3%20Feladat)**
 > > - [ ] ***Készítsünk egy programot, amelyik 10 szál segítségével meghatározza, hogy mennyi prímszám van a [0, 99], [100, 199], … intervallumokon! A szálaknak adja át az intervallumok indexét, majd az eredményt így írják közvetlenül egy globális tömbbe!***
-> 4. **[Feldat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/3%20Gyakorlat/POSIX%20sz%C3%A1lak/4%20Feladat)**
+> 3. **[Feldat](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok/Gyakorlati%20Feladatok/3%20Gyakorlat/POSIX%20sz%C3%A1lak/3%20Feladat)**
 > > - [ ] ***Vizsgáljuk meg, hogy mi történik, hogy ha egy szálban futás idejű hiba keletkezik!***
 ----
 
