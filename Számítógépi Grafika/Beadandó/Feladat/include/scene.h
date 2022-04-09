@@ -1,91 +1,106 @@
 #ifndef SCENE_H
-#define SCENE_H
+    #define SCENE_H
 
-#include "camera.h"
-#include "texture.h"
+    #include <stdlib.h>
+    #include <stdbool.h>
+    #include <obj/model.h>
 
-#include <obj/model.h>
+    #include "camera.h"
+    #include "texture.h"
 
-#include <stdlib.h>
+    #define LIGHT_ALPHA_MINIMUM 0.2f // Light animation alpha minimum value.
+    #define LIGHT_ALPHA_MAXIMUM 0.8f // Light animation alpha maximum value.
 
-/**
- * 
- */
-typedef struct Models {
-    Model model;
-    GLuint texture;
-    Material material;
-} Models;
+    typedef struct Object {
+        Model model;
+        GLuint texture;
+    } Object;
 
-/**
- * 
- */
-typedef struct Scene {
-    //Model cube;
-    //GLuint cube_texture_id;
+    typedef struct Light {
+        float ambient[4];
+        float diffuse[4];
+        float specular[4];
+        float position[4];
 
-    Models* models;
-    int models_size;
-    int models_used;
+        float speed;
+    } Light;
 
-    Light* lights;
-    int light_size;
-    int light_used;
+    typedef struct Scene {
+        bool dev_mode;
+        bool debug_mode;
 
-    bool is_dev_mode;
-} Scene;
+        Object* objects;
+        int object_used;
+        int object_size;
 
-/**
- * 
- */
-void add_model(Scene* scene, char* model_src, char* texture_src);
+        Light* lights;
+        int light_used;
+        int light_size;
 
-/**
- *
- */
-void set_model_material(Models* models, double ambient_red, double ambient_green, double ambient_blue, double diffuse_red, double diffuse_green, double diffuse_blue, double specular_red, double specular_green, double specular_blue, double shininess);
+        vec3 duck_position;
+        vec3 duck_rotation;
 
-/**
- * Initialize the scene by loading models.
- */
-void init_scene(Scene* scene);
+        Material material;
+    } Scene;
 
-/**
- * Set the lighting of the scene.
- */
-//void set_lighting();
-void set_lighting(Light* light, int index);
+    /**
+     * Initialize the scene.
+     */
+    void init_scene(Scene* scene);
 
-void add_light(Scene* scene, RGBA ambient, RGBA diffuse, RGBA specular, vec4 position);
+    /**
+     * Initialize the model and texture.
+     */
+    void init_objects(Scene* scene);
 
-/**
- * Set the current material.
- */
-void set_material(const Material* material);
+    /**
+     * Initialize the lights
+     */
+    void init_lights(Scene* scene);
 
-/**
- * 
- */
-void draw_texture_model(Models model);
+    /**
+     * Loads and puts the model on the array.
+     */
+    void add_model(Scene* scene, char* model_src, char* texture_src);
 
-/**
- * Update the scene.
- */
-void update_scene(Scene* scene, double time);
+    /**
+     * Inserts the light data into an array.
+     */
+    void add_light(Scene* scene, float ambient[4], float diffuse[4], float specular[4], float position[4]);
+    
+    /**
+     * Adjusts the animation speed of that light.
+     */
+    void set_light_speed(Light* light, float speed);
 
-/**
- * Render the scene objects.
- */
-void render_scene(const Scene* scene);
+    /**
+     * Selects the appropriate texture and draws the model.
+     */
+    void draw_object(Object object);
 
-/**
- * Draw the origin of the world coordinate system.
- */
-void draw_origin();
+    /**
+     * Displays/draws the lights.
+     */
+    void draw_light(const Scene* scene);
 
-/**
- * 
- */
-void set_light_speed(Light* light, double speed);
+    /**
+     * Set the current material.
+     */
+    void set_material(const Material* material);
+
+    /**
+     * Update the scene.
+     */
+    void update_scene(Scene* scene, double time);
+
+    /**
+     * Render the scene objects.
+     */
+    void render_scene(const Scene* scene);
+
+    /**
+     * Draw the origin of the world coordinate system.
+     */
+    void draw_origin();
 
 #endif /* SCENE_H */

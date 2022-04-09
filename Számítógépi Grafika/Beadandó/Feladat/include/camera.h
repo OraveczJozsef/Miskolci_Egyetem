@@ -1,66 +1,87 @@
 #ifndef CAMERA_H
-#define CAMERA_H
+    #define CAMERA_H
 
-#include "utils.h"
+    #include <stdbool.h>
+    #include <stdlib.h>
+    #include <stdio.h>
 
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+    #include "utils.h"
 
-/**
- * Camera, as a moving point with direction
- */
-typedef struct Camera
-{
-    vec3 position;
-    vec3 rotation;
-    vec3 speed;
-    
-    double multiplier;
+    #define COLLISION_PADDING 0.25
 
-    bool is_preview_visible;
+    /**
+     * Camera, as a moving point with direction
+     */
+    typedef struct Camera {
+        vec3 position;
+        vec3 rotation;
+        vec3 speed;
 
-    Collisions collisions[5];
-} Camera;
+        float multiplier;
 
-/**
- * Initialize the camera to the start position.
- */
-void init_camera(Camera* camera);
+        bool is_preview_visible;
+        
+        bool dev_mode;
+        bool debug_mode;
 
-void init_collision(Camera* camera);
+        Collision* collisions;
+        int collisions_size;
+        int collisions_used;
+    } Camera;
 
-/**
- * Update the position of the camera.
- */
-void update_camera(Camera* camera, double time);
+    /**
+     * Initialize the camera to the start position.
+     */
+    void init_camera(Camera* camera);
 
-/**
- * Apply the camera settings to the view transformation.
- */
-void set_view(const Camera* camera);
+    /**
+     * Initializes the collision.
+     */
+    void init_collision(Camera* camera);
 
-/**
- * Set the horizontal and vertical rotation of the view angle.
- */
-void rotate_camera(Camera* camera, double horizontal, double vertical);
+    /**
+     * Add a new collision to the array.
+     */
+    void add_collision(Camera* camera, float x, float y, float w, float h);
 
-/**
- * Set the speed of forward and backward motion.
- */
-void set_camera_speed(Camera* camera, double speed);
+    /**
+     * Update the position of the camera.
+     */
+    void update_camera(Camera* camera, double time);
 
-/**
- * Set the speed of left and right side steps.
- */
-void set_camera_side_speed(Camera* camera, double speed);
+    /**
+     * Apply the camera settings to the view transformation.
+     */
+    void set_view(const Camera* camera);
 
-/**
- * Set the camera speed all side.
- */
-void set_camera_multiplier(Camera* camera, double multiplier);
+    /**
+     * Set the horizontal and vertical rotation of the view angle.
+     */
+    void rotate_camera(Camera* camera, double horizontal, double vertical);
 
+    /**
+     * Set the speed of forward and backward motion.
+     */
+    void set_camera_speed(Camera* camera, double speed);
 
-void show_texture_preview();
+    /**
+     * Set the speed of left and right side steps.
+     */
+    void set_camera_side_speed(Camera* camera, double speed);
+
+    /**
+     * Speed multiplier (walking, stealth, running).
+     */
+    void set_camera_multiplier(Camera* camera, float multiplier);
+
+    /**
+     * The given coordinate (x, y) is included in this collision.
+     */
+    bool in_collision(float new_position_x, float new_position_y, Collision collision);
+
+    /**
+     * 
+     */
+    void show_texture_preview();
+
 #endif /* CAMERA_H */
