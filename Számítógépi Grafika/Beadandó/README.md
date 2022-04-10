@@ -1,9 +1,4 @@
 # Féléves feladat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika)]
-
-## Felhasznnált publikációk
-### Modellek:
-> - Kandarlo: [Itt](https://www.turbosquid.com/3d-models/free-fireplace-3d-model/983390)
-
 ## Feladat leírás:
 
 

@@ -12,7 +12,7 @@ void init_scene(Scene* scene) {
     scene->debug_mode = false;
     scene->is_show_help = false;
 
-    scene->help_texture = load_texture("assets/textures/fireplace.jpg");
+    scene->help_texture = load_texture("assets/textures/help.jpg");
 
     /* Model */
     init_objects(scene);
@@ -306,6 +306,7 @@ void draw_light(const Scene* scene) {
 }
 
 void draw_help(const GLuint texture) {
+    // Benjámin Bettes segített
     glDisable(GL_CULL_FACE);
     glDisable(GL_LIGHTING);
     glDisable(GL_DEPTH_TEST);
@@ -320,10 +321,13 @@ void draw_help(const GLuint texture) {
     glBegin(GL_QUADS);
         glTexCoord2f(0, 0);
         glVertex3d(-2, 1.5, -3);
+
         glTexCoord2f(1, 0);
         glVertex3d(2, 1.5, -3);
+
         glTexCoord2f(1, 1);
         glVertex3d(2, -1.5, -3);
+        
         glTexCoord2f(0, 1);
         glVertex3d(-2, -1.5, -3);
     glEnd();

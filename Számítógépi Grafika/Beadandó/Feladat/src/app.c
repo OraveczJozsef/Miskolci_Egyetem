@@ -146,6 +146,7 @@ void handle_app_events(App* app)
                         break;
                     case SDL_SCANCODE_F1:
                         set_show_help(&(app->scene), !(app->scene.is_show_help));
+                        break;
                     default:
                         break;
                 }
