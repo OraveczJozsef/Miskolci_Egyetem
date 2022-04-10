@@ -10,6 +10,9 @@ void init_scene(Scene* scene) {
 
     scene->dev_mode = false;
     scene->debug_mode = false;
+    scene->is_show_help = false;
+
+    scene->help_texture = load_texture("assets/textures/fireplace.jpg");
 
     /* Model */
     init_objects(scene);
@@ -142,6 +145,9 @@ void set_material(const Material* material) {
     glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, &(material->shininess));
 }
 
+void set_show_help(Scene* scene, bool state) {
+    scene->is_show_help = state;
+}
 
 
 void update_scene(Scene* scene, double time) {
@@ -236,6 +242,11 @@ void render_scene(const Scene* scene) {
     glDisable(GL_COLOR_MATERIAL);
     glDisable(GL_BLEND);
     glEnable(GL_TEXTURE_2D);
+
+    // Help panel
+    if (scene->is_show_help) {
+        draw_help(scene->help_texture);
+    }
 }
 
 
@@ -257,7 +268,7 @@ void draw_origin() {
     glEnd();
 }
 
-void draw_object(Object object) {
+void draw_object(const Object object) {
     glBindTexture(GL_TEXTURE_2D, object.texture);
     draw_model(&object.model);
 }
@@ -292,4 +303,33 @@ void draw_light(const Scene* scene) {
             printf("[Light Speed]: %f\n", scene->lights[i].speed);
         }*/
     }
+}
+
+void draw_help(const GLuint texture) {
+    glDisable(GL_CULL_FACE);
+    glDisable(GL_LIGHTING);
+    glDisable(GL_DEPTH_TEST);
+    glEnable(GL_COLOR_MATERIAL);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+
+    glColor3f(1, 1, 1);
+    glBindTexture(GL_TEXTURE_2D, texture);
+
+    glBegin(GL_QUADS);
+        glTexCoord2f(0, 0);
+        glVertex3d(-2, 1.5, -3);
+        glTexCoord2f(1, 0);
+        glVertex3d(2, 1.5, -3);
+        glTexCoord2f(1, 1);
+        glVertex3d(2, -1.5, -3);
+        glTexCoord2f(0, 1);
+        glVertex3d(-2, -1.5, -3);
+    glEnd();
+
+    glDisable(GL_COLOR_MATERIAL);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
 }

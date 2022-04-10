@@ -144,6 +144,8 @@ void handle_app_events(App* app)
                         set_light_speed(&(app->scene.lights[1]), -1);
                         set_light_speed(&(app->scene.lights[2]), -1);
                         break;
+                    case SDL_SCANCODE_F1:
+                        set_show_help(&(app->scene), !(app->scene.is_show_help));
                     default:
                         break;
                 }

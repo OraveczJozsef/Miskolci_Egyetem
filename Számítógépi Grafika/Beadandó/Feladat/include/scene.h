@@ -11,11 +11,17 @@
     #define LIGHT_ALPHA_MINIMUM 0.2f // Light animation alpha minimum value.
     #define LIGHT_ALPHA_MAXIMUM 0.8f // Light animation alpha maximum value.
 
+    /**
+     * Model and associated texture.
+     */
     typedef struct Object {
         Model model;
         GLuint texture;
     } Object;
 
+    /**
+     * Characteristics of light sources.
+     */
     typedef struct Light {
         float ambient[4];
         float diffuse[4];
@@ -37,10 +43,10 @@
         int light_used;
         int light_size;
 
-        vec3 duck_position;
-        vec3 duck_rotation;
-
         Material material;
+
+        bool is_show_help;
+        GLuint help_texture;
     } Scene;
 
     /**
@@ -76,7 +82,7 @@
     /**
      * Selects the appropriate texture and draws the model.
      */
-    void draw_object(Object object);
+    void draw_object(const Object object);
 
     /**
      * Displays/draws the lights.
@@ -87,6 +93,11 @@
      * Set the current material.
      */
     void set_material(const Material* material);
+
+    /**
+     * Sets the is_show_help changed, which if true is visible otherwise not visible
+     */
+    void set_show_help(Scene* scene, bool state);
 
     /**
      * Update the scene.
@@ -102,5 +113,10 @@
      * Draw the origin of the world coordinate system.
      */
     void draw_origin();
+
+    /**
+     * Draw the Help panel.
+     */
+    void draw_help(const GLuint texture);
 
 #endif /* SCENE_H */

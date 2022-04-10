@@ -104,8 +104,7 @@ void update_camera(Camera* camera, double time) {
     }
 }
 
-void rotate_camera(Camera* camera, double horizontal, double vertical)
-{
+void rotate_camera(Camera* camera, double horizontal, double vertical) {
     camera->rotation.z += horizontal;
     camera->rotation.x += vertical;
 
