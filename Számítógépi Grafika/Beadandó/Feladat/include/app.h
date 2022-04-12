@@ -4,6 +4,7 @@
     #include <SDL2/SDL.h>
     #include <stdbool.h>
     #include <stdio.h>
+    #include <math.h>
 
     #include "camera.h"
     #include "scene.h"

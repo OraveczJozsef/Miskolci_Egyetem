@@ -1,18 +1,14 @@
 #include "scene.h"
 
-#include <obj/load.h>
-#include <obj/draw.h>
-#include <stdlib.h>
-#include <time.h>
-
 void init_scene(Scene* scene) {
-    srand(time(NULL));
 
     scene->dev_mode = false;
     scene->debug_mode = false;
-    scene->is_show_help = false;
 
+    /* Help */
+    scene->is_show_help = false;
     scene->help_texture = load_texture("assets/textures/help.jpg");
+    /* Help */
 
     /* Model */
     init_objects(scene);
@@ -21,6 +17,10 @@ void init_scene(Scene* scene) {
     /* Light */
     init_lights(scene);
     /* Light */
+
+    /* Fire */
+    init_fire(&(scene->fire));
+    /* Fire */
 
     scene->material.ambient.red = 0.0;
     scene->material.ambient.green = 0.0;
@@ -54,7 +54,7 @@ void init_lights(Scene* scene) {
     float ambient_light[] = { 0.0f, 0.0f, 0.0f, 1.0f };
     float diffuse_light[] = { 1.0f, 1.0f, 1.0, 1.0f };
     float specular_light[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-    float position[] = { 0.0f, 10.0f, 10.0f, 0.0f };
+    float position[] = { 0.0f, 0.0f, 1.0f, 0.0f };
 
     scene->light_size = 1;
     scene->light_used = 0;
@@ -76,6 +76,15 @@ void init_lights(Scene* scene) {
     position[1] = -5.633071f;
     position[2] = 3.8f;
     position[3] = 1.0f;
+    add_light(scene, ambient_light, diffuse_light, specular_light, position);
+
+    diffuse_light[0] = 1.0f;
+    diffuse_light[1] = 0.35f;
+    diffuse_light[2] = 0.0f;
+    diffuse_light[3] = 0.5f;
+    position[0] = 5.8f;
+    position[1] = -0.03;
+    position[2] = 0.55f;
     add_light(scene, ambient_light, diffuse_light, specular_light, position);
 }
 
@@ -168,6 +177,8 @@ void update_scene(Scene* scene, double time) {
         }
     }
 
+    /* Fire Texture */
+    update_fire(&(scene->fire), time);
 }
 
 void render_scene(const Scene* scene) {
@@ -213,6 +224,9 @@ void render_scene(const Scene* scene) {
     glPopMatrix();
     
     // ter
+    glDisable(GL_LIGHT1);
+    glDisable(GL_LIGHT2);
+    glDisable(GL_LIGHT3);
     glPushMatrix();
         glTranslatef(-1.0f, -150.0f, -20.0f);
         glRotatef(90, 1.0f, 0.0f, 0.0f);
@@ -220,7 +234,12 @@ void render_scene(const Scene* scene) {
 
         draw_object(scene->objects[4]);
     glPopMatrix();
-    
+    glEnable(GL_LIGHT3);
+    glEnable(GL_LIGHT2);
+    glEnable(GL_LIGHT1);
+
+    // Fire
+    render_fire(&(scene->fire));    
 
     // Window
     glDisable(GL_TEXTURE_2D);
@@ -239,10 +258,10 @@ void render_scene(const Scene* scene) {
         glVertex3f(-3.8f, 6.0f, 2.5f);
     glEnd();
 
+    glEnable(GL_TEXTURE_2D);
     glDisable(GL_COLOR_MATERIAL);
     glDisable(GL_BLEND);
-    glEnable(GL_TEXTURE_2D);
-
+    
     // Help panel
     if (scene->is_show_help) {
         draw_help(scene->help_texture);
@@ -292,6 +311,11 @@ void draw_light(const Scene* scene) {
             glLightfv(GL_LIGHT2, GL_DIFFUSE, scene->lights[i].diffuse);
             glLightfv(GL_LIGHT2, GL_SPECULAR, scene->lights[i].specular);
             glLightfv(GL_LIGHT2, GL_POSITION, scene->lights[i].position);
+        } else if (i == 3) {
+            glLightfv(GL_LIGHT3, GL_AMBIENT, scene->lights[i].ambient);
+            glLightfv(GL_LIGHT3, GL_DIFFUSE, scene->lights[i].diffuse);
+            glLightfv(GL_LIGHT3, GL_SPECULAR, scene->lights[i].specular);
+            glLightfv(GL_LIGHT3, GL_POSITION, scene->lights[i].position);
         }
 
         /*if (scene->debug_mode) {
@@ -306,16 +330,17 @@ void draw_light(const Scene* scene) {
 }
 
 void draw_help(const GLuint texture) {
-    // Benjámin Bettes segített
+    // Benjámin Bettes
     glDisable(GL_CULL_FACE);
     glDisable(GL_LIGHTING);
     glDisable(GL_DEPTH_TEST);
     glEnable(GL_COLOR_MATERIAL);
+    glEnable(GL_BLEND);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    glColor3f(1, 1, 1);
+    glColor4f(0.75f, 0.75f, 0.75f, 1.0f);
     glBindTexture(GL_TEXTURE_2D, texture);
 
     glBegin(GL_QUADS);
@@ -331,9 +356,12 @@ void draw_help(const GLuint texture) {
         glTexCoord2f(0, 1);
         glVertex3d(-2, -1.5, -3);
     glEnd();
+    
 
+    glDisable(GL_BLEND);
     glDisable(GL_COLOR_MATERIAL);
     glEnable(GL_LIGHTING);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+    // -------------
 }

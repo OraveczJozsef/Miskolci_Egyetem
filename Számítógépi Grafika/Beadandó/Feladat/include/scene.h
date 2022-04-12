@@ -3,10 +3,15 @@
 
     #include <stdlib.h>
     #include <stdbool.h>
+
     #include <obj/model.h>
+    #include <obj/load.h>
+    #include <obj/draw.h>
 
     #include "camera.h"
     #include "texture.h"
+
+    #include "fire.h"
 
     #define LIGHT_ALPHA_MINIMUM 0.2f // Light animation alpha minimum value.
     #define LIGHT_ALPHA_MAXIMUM 0.8f // Light animation alpha maximum value.
@@ -39,6 +44,8 @@
         int object_used;
         int object_size;
 
+        Fire fire;
+
         Light* lights;
         int light_used;
         int light_size;
@@ -68,7 +75,7 @@
      * Loads and puts the model on the array.
      */
     void add_model(Scene* scene, char* model_src, char* texture_src);
-
+    
     /**
      * Inserts the light data into an array.
      */

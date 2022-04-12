@@ -16,7 +16,7 @@ void init_app(App* app, int width, int height)
     }
 
     app->window = SDL_CreateWindow(
-        "Cube!",
+        "Project (Oravecz Jozsef | BRZGJZ)",
         SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
         width, height,
         SDL_WINDOW_OPENGL);
@@ -46,6 +46,8 @@ void init_app(App* app, int width, int height)
     app->is_running = true;
     app->dev_mode = false;
     app->debug_mode = false;
+
+    app->uptime = 0.0;
 }
 
 void init_opengl() {
@@ -54,7 +56,9 @@ void init_opengl() {
     glEnable(GL_NORMALIZE);
     glEnable(GL_AUTO_NORMAL);
 
+    // Szöllősi János
     glClearColor(0.1, 0.2, 0.7, 1.0);
+    // --------------
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -69,6 +73,7 @@ void init_opengl() {
     glEnable(GL_LIGHT0);
     glEnable(GL_LIGHT1);
     glEnable(GL_LIGHT2);
+    glEnable(GL_LIGHT3);
 }
 
 void reshape(GLsizei width, GLsizei height)
@@ -236,8 +241,8 @@ void render_app(App* app)
     glMatrixMode(GL_MODELVIEW);
 
     glPushMatrix();
-    set_view(&(app->camera));
-    render_scene(&(app->scene));
+        set_view(&(app->camera));
+        render_scene(&(app->scene));
     glPopMatrix();
 
     if (app->camera.is_preview_visible) {
