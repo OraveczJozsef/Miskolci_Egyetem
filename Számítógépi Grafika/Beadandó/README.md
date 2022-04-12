@@ -11,7 +11,7 @@
 > - [ ] **Animáció, mozgatás:** *A program legyen interaktív. A modelleket, fényeket billentyűzettel, egérrel lehessen mozgatni; legyenek animált részek.*
 > - [x] **Textúrák:** *A modelleknek legyen textúrája.*
 > - [x] **Fények:** *A programban a fényeket a + és - billentyűk segítségével lehessen állítani (vagy egyéb kézenfekvő módon a program leírása alapján).*
-> - [ ] **Használati útmutató:** *Az F1 gomb megnyomására (vagy egyéb kézenfekvő módon) jelenjen megy egy leírás a programról, annak használatáról, kezelési módjáról.*
+> - [x] **Használati útmutató:** *Az F1 gomb megnyomására (vagy egyéb kézenfekvő módon) jelenjen megy egy leírás a programról, annak használatáról, kezelési módjáról.*
 
 ## Többlet funkciók
 > - ***A jobb jegyért például az alábbi dolgokat lehet a programban megvalósítani.***
