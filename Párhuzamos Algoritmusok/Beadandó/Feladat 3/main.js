@@ -2,7 +2,10 @@ const settings = {
     width: 80,
     height: 40,
     colors: 30,
-    draw_time: 0.000000000000000000000000000000000000000000001,
+
+    draw_time: 30,
+    render_time: 3000,
+
     palette: [
         '#fff',
         '#fff',
@@ -77,10 +80,10 @@ async function matrix_run() {
     for (let y = settings.height; y >= 0; y--) {
         draw_line(y);
 
-        //await sleep(settings.draw_time);
     }
 
-    await sleep(30);
+    await sleep(settings.render_time);
+    //await sleep(draw_time);
 
     //console.log("[Main] Ready ...");
     if (is_run) {
@@ -90,9 +93,11 @@ async function matrix_run() {
 
 async function draw_line(y) {
     console.log("[Y: " + y + "] Draw line...");
-    await sleep(settings.draw_time);
 
     for (let x = 0; x < settings.width; x++) {
+        //await sleep(y * 1000);
+        await sleep((settings.height - y) * settings.draw_time);
+
         if (y == settings.height) {
             if (step == 0) {
                 matrix[y][x].color = Math.floor(Math.random() * settings.colors);
