@@ -1,2 +1,2 @@
 all:
-	gcc src/main.c -o project.exe -fopenmp 
+	gcc -Iinclude/ src/main.c src/quicksort.c src/util.c src/simulation.c -o project.exe -fopenmp 
