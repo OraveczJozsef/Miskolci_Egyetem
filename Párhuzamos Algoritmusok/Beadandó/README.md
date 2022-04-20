@@ -5,8 +5,8 @@
 - Feladat: a QuickSort rendezési algoritmus párhuzamosítása OpenMp-vel.
 - A szimuláció során 0 - 50 000 méretű tömböt vizsgálunk random számokkal és 25 000 lépésközzel.
 - Egy mérésben négy esetet vizsgálunk:
-- - egy szál (1 thread)
-- - két szál (2 thread)
-- - négy szál (4 thread)
-- - nyolc szál (8 thread)
+> - egy szál (1 thread)
+> - két szál (2 thread)
+> - négy szál (4 thread)
+> - nyolc szál (8 thread)
 - Mind a négy esetben ugyanazt a tömböt vizsgáljuk.
