@@ -1,4 +1,5 @@
 #include "quicksort.h"
+#include "util.h"
 
 void quick_sort(int* array, int low, int high) {
     int pivot;
@@ -8,16 +9,13 @@ void quick_sort(int* array, int low, int high) {
 
         #pragma omp task firstprivate(array, low, pivot)
         {
-            //printf("[Thread - %d] Pivot: %d\n", omp_get_thread_num(), pivot);
             quick_sort(array, low, (pivot - 1));
         }
-        /*
-        #pragma omp task firstprivate(array, low, pivot)
+    
+        #pragma omp task firstprivate(array, high, pivot)
         {
-            printf("[Thread - %d] Pivot: %d\n", omp_get_thread_num(), pivot);
             quick_sort(array, (pivot + 1), high);
         }
-        */
     }
 }
 
