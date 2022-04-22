@@ -97,6 +97,7 @@ async function draw_line(y) {
     for (let x = 0; x < settings.width; x++) {
         //await sleep(y * 1000);
         await sleep((settings.height - y) * settings.draw_time);
+        //await sleep(5 * settings.draw_time);
 
         if (y == settings.height) {
             if (step == 0) {

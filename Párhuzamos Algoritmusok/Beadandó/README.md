@@ -13,6 +13,6 @@
 - Mind a négy esetben ugyanazt a tömböt vizsgáljuk.
 
 ### Feladat 3
-- Feladat: Html-ben egy tűz animációt készíteni, és ezt soronként "párhuzamosítani".
-- A **draw_time** egy adott pixel kirajzolási sebességét adja meg ms-ben.
-- A **render_time** azt adja meg, hogy hány ms-enként indíts ujra egy sor ki rajzolást.
+- Feladat: JavaScript-ben egy tűz animációt soronként "párhuzamosítani".
+- A **draw_time** *[Default: 30]* egy adott pixel kirajzolási sebességét adja meg ms-ben.
+- A **render_time** *[Default: 3000]* azt adja meg, hogy hány ms-enként indíts ujra egy sor ki rajzolást.
