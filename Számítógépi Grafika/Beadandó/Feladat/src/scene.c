@@ -262,6 +262,11 @@ void render_scene(const Scene* scene) {
     glDisable(GL_COLOR_MATERIAL);
     glDisable(GL_BLEND);
     
+    // Fire Effect
+    if (scene->fire.fire_effect) {
+        draw_fire_effect(scene);
+    }
+
     // Help panel
     if (scene->is_show_help) {
         draw_help(scene->help_texture);
@@ -335,7 +340,7 @@ void draw_help(const GLuint texture) {
     glDisable(GL_LIGHTING);
     glDisable(GL_DEPTH_TEST);
     glEnable(GL_COLOR_MATERIAL);
-    glEnable(GL_BLEND);
+    //glEnable(GL_BLEND);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -358,10 +363,39 @@ void draw_help(const GLuint texture) {
     glEnd();
     
 
-    glDisable(GL_BLEND);
+    //glDisable(GL_BLEND);
     glDisable(GL_COLOR_MATERIAL);
     glEnable(GL_LIGHTING);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     // -------------
+}
+
+void draw_fire_effect(const Scene* scene) {
+    glDisable(GL_TEXTURE_2D);
+    glDisable(GL_CULL_FACE);
+    glDisable(GL_LIGHTING);
+    glDisable(GL_DEPTH_TEST);
+    glEnable(GL_COLOR_MATERIAL);
+    glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+        glMatrixMode(GL_MODELVIEW);
+        glLoadIdentity();
+        
+        glBegin(GL_QUADS);
+            glColor4f(scene->fire.fire_effect_rgba.red, scene->fire.fire_effect_rgba.green, scene->fire.fire_effect_rgba.blue, scene->fire.fire_effect_rgba.alpha);
+            
+            glVertex3d(-3, 2, -3);
+            glVertex3d(3, 2, -3);
+            glVertex3d(3, -2, -3);
+            glVertex3d(-3, -2, -3);
+        glEnd();
+
+    glDisable(GL_BLEND);
+    glDisable(GL_COLOR_MATERIAL);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_TEXTURE_2D);
 }

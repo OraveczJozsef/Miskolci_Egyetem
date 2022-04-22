@@ -2,6 +2,7 @@
     #define FIRE_HEADER
 
     #include <stdlib.h>
+    #include <stdbool.h>
 
     #include <obj/model.h>
     #include <obj/load.h>
@@ -10,6 +11,15 @@
     #include "texture.h"
     #include "utils.h"
 
+    typedef struct FireData {
+        int texture_actual;
+        float time;
+        float radius;
+
+        vec3 position;
+        vec3 rotation;
+    } FireData;
+
     typedef struct Fire {
         Model model;
 
@@ -17,11 +27,12 @@
         int texture_size;
         int texture_used;
         
-        int texture_actual;
-        float time;
+        FireData* fire_data;
+        int fire_data_size;
+        int fire_data_used;
 
-        vec3 position;
-        vec3 rotation;
+        bool fire_effect;
+        ColorA fire_effect_rgba;
     } Fire;
 
     /**
@@ -33,6 +44,11 @@
      * Inserts the fire texture into an array.
      */
     void add_texture(Fire* fire, char* src);
+
+    /**
+     * Inserts the fire data into an array.
+     */
+    void add_fire(Fire* fire, int texture_actual, float time, float radius, vec3 position, vec3 rotation);
 
     /**
      * Update the fire.

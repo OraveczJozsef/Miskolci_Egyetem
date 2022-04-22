@@ -126,4 +126,9 @@
      */
     void draw_help(const GLuint texture);
 
+    /**
+     * 
+     */
+    void draw_fire_effect(const Scene* scene);
+
 #endif /* SCENE_H */

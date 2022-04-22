@@ -9,7 +9,6 @@
     #include "camera.h"
     #include "scene.h"
 
-
     #define VIEWPORT_RATIO (4.0 / 3.0)
     #define VIEWPORT_ASPECT 50.0
 
@@ -52,6 +51,9 @@
      * Update the application.
      */
     void update_app(App* app);
+
+    void update_fire_rotation(Scene* scene, Camera* camera);
+    void update_fire_effect(Scene* scene, Camera* camera);
 
     /**
      * Render the application.

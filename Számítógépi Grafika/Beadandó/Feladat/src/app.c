@@ -222,8 +222,7 @@ void handle_app_events(App* app)
     }
 }
 
-void update_app(App* app)
-{
+void update_app(App* app) {
     double current_time;
     double elapsed_time;
 
@@ -233,10 +232,71 @@ void update_app(App* app)
 
     update_camera(&(app->camera), elapsed_time);
     update_scene(&(app->scene), elapsed_time);
+
+    /* Fire */
+    update_fire_rotation(&(app->scene), &(app->camera));
+    update_fire_effect(&(app->scene), &(app->camera));
 }
 
-void render_app(App* app)
-{
+void update_fire_rotation(Scene* scene, Camera* camera) {
+    int i;
+    vec2 camera_position;
+    vec2 fire_position;
+    vec2 eye;
+    float rotation, angle;
+
+    camera_position.x = camera->position.x;
+    camera_position.y = camera->position.y;
+
+    for (i = 0; i < scene->fire.fire_data_used; i++) {
+        fire_position.x = scene->fire.fire_data[i].position.x;
+        fire_position.y = scene->fire.fire_data[i].position.y;
+
+        eye.x = camera_position.x - fire_position.x;
+        eye.y = camera_position.y - fire_position.y;
+
+        eye = normalize_vec2(eye);
+
+        rotation = eye.x * 0.0f + eye.y * -1.0f;
+
+        if (camera_position.x < fire_position.x) {
+            angle = acosf(-rotation);
+            angle += M_PI;
+        } else {
+            angle = acosf(rotation);
+        }
+
+        angle = angle * 180 / M_PI;
+
+        scene->fire.fire_data[i].rotation.y = angle;
+    }
+}
+
+void update_fire_effect(Scene* scene, Camera* camera) {
+    int i;
+    float distance;
+    scene->fire.fire_effect = false;
+
+    for (i = 0; i < scene->fire.fire_data_used; i++) {
+        distance = sqrt(pow(fabs(scene->fire.fire_data[i].position.x - camera->position.x), 2) + pow(fabs(scene->fire.fire_data[i].position.y - camera->position.y), 2));
+        
+        if (distance <= scene->fire.fire_data[i].radius) {
+            scene->fire.fire_effect = true;
+
+            if (distance < 1.0f) {
+                distance = 1.0f;
+            }
+    
+            scene->fire.fire_effect_rgba.red = 0.7f;
+            scene->fire.fire_effect_rgba.green = 0.31f;
+            scene->fire.fire_effect_rgba.blue = 0.31f;
+            scene->fire.fire_effect_rgba.alpha = 0.75f / distance;
+            break;
+        }
+    }
+}
+
+void render_app(App* app) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
 
@@ -252,8 +312,7 @@ void render_app(App* app)
     SDL_GL_SwapWindow(app->window);
 }
 
-void destroy_app(App* app)
-{
+void destroy_app(App* app) {
     if (app->gl_context != NULL) {
         SDL_GL_DeleteContext(app->gl_context);
     }
