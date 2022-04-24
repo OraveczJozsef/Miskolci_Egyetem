@@ -1,4 +1,4 @@
-package project.simulation;
+package project.main;
 
 import project.object.ListArray;
 

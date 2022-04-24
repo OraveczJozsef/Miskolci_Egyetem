@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListArray {
+
     private int array[];
-
     private int thread;
-
     private long startTime;
     private long endTime;
+
 
     public ListArray(int size, int thread) {
         setArray(size);

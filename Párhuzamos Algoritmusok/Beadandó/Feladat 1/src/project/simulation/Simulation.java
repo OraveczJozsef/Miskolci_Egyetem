@@ -1,5 +1,6 @@
 package project.simulation;
 
+import project.main.MergeSort;
 import project.object.ListArray;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class Simulation {
         Random rand = new Random();
         List<ListArray> list = new ArrayList<>();
 
+        /* Init Array */
         for (i = 0; i < THREAD_COUNT; i++) {
             list.add(new ListArray(arraySize, (int)Math.pow(2, i)));
         }
@@ -26,10 +28,12 @@ public class Simulation {
             }
         }
 
+        /* Merge */
         for (i = 0; i < THREAD_COUNT; i++) {
             MergeSort.addThreadSort(list.get(i));
         }
 
+        /* Print */
         System.out.println("============= [[ " + arraySize + " ]] =============");
         /*
         System.out.println(list.get(0).toString());
@@ -41,6 +45,6 @@ public class Simulation {
         list.get(1).printRunTime();
         list.get(2).printRunTime();
         list.get(3).printRunTime();
-        System.out.println("\n\n");
+        System.out.println("\n");
     }
 }
