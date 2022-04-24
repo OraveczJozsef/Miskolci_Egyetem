@@ -1,2 +1,2 @@
 all:
-	gcc main.c -lm -o main.exe
+	gcc main.c -o project.exe -lpthread 
