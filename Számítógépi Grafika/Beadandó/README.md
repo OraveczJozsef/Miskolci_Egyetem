@@ -1,7 +1,7 @@
 # Féléves feladat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika)]
 ## Feladatról
 ### Feladat rövid leírása:
-- A feladatomban szerettem volna elkészíteni egy szobát, amiben lehet mozogni, van egy ablakot, ami át tetsző, több különböző fényforrások kezelése, egy kandalló, amiben lobog egy tűz.
+- A feladatomban szerettem volna elkészíteni egy szobát, amiben lehet mozogni, van egy ablakot, ami áttetsző, több különböző fényforrások kezelése, egy kandalló, amiben lobog egy tűz.
 
 ### Modellek:
 ```diff
