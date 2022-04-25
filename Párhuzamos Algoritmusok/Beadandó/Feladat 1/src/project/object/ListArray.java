@@ -51,6 +51,7 @@ public class ListArray {
         return this.endTime;
     }
 
+    /* Methods */
     @Override
     public String toString() {
         int array[] = this.getArray();

@@ -1,18 +1,35 @@
 # Féléves feladat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/P%C3%A1rhuzamos%20Algoritmusok)]
+## Feladat 1 (Java)
+### Feladat rövid leírása:
+- Java programozási nyelvben a MergeSort rendezési algoritmus párhuzamosítása és mérése.
 
-## Feladatok leírása:
-### Feladat 1
-### Feladat 2
-- Feladat: a QuickSort rendezési algoritmus párhuzamosítása OpenMp-vel.
-- A szimuláció során 0 - 50 000 méretű tömböt vizsgálunk random számokkal és 25 000 lépésközzel.
-- Egy mérésben négy esetet vizsgálunk:
-> - egy szál (1 thread)
-> - két szál (2 thread)
-> - négy szál (4 thread)
-> - nyolc szál (8 thread)
-- Mind a négy esetben ugyanazt a tömböt vizsgáljuk.
+### Mérés
+- A mérésteket 4 szer végeztem el és az értékeket átlagoltam.
+- A mérésben 4 esetett vizsgáltam:
+- - Egy szál (1 Thread)
+- - Két szál (2 Thread)
+- - Négy szál (4 Thread)
+- - Nyolc szál (8 Thread)
+- A négy esetben előszőr ***0 - 200 000*** intervallumban ***10 000*** lépésközű mérést végeztem el, majd ***0 - 2 000 000*** intervallumban ***100 000*** lépésközű mérést végeztem el.
+- Mind a 4 esetben egy-egy tömböt rendezett, amiben ugyan azok az elemek voltak.
+- A mérés végeredménye a diagram.xlsx (Excel táblázatban) található.
 
-### Feladat 3
-- Feladat: JavaScript-ben egy tűz animációt soronként "párhuzamosítani".
-- A **draw_time** *[Default: 30]* egy adott pixel kirajzolási sebességét adja meg ms-ben.
-- A **render_time** *[Default: 3000]* azt adja meg, hogy hány ms-enként indíts ujra egy sor ki rajzolást.
+
+## Feladat 2 (C [OpenMp])
+### Feladat rövid leírása:
+- C programozási nyelvben a Quick Sort rendezési algoritmus párhuzamosítása OpenMp módszerrel és mérése.
+
+### Mérés
+- A mérésteket 4 szer végeztem el és az értékeket átlagoltam.
+- A mérésben 4 esetett vizsgáltam:
+- - Egy szál (1 Thread)
+- - Két szál (2 Thread)
+- - Négy szál (4 Thread)
+- - Nyolc szál (8 Thread)
+- A négy esetben előszőr ***0 - 200 000*** intervallumban ***10 000*** lépésközű mérést végeztem ell.
+- Mind a 4 esetben egy-egy tömböt rendezett ami ugyan azok az elemek voltak benne.
+- A mérés végeredménye a diagram.xlsx (Excel táblázatban) található.
+
+## Feladat 3 (JavaScript)
+### Feladat rövid leírása:
+- Html, css, javascript-ben a tűz animáció megvalósítása és soronkénti "párhuzamositás" elkészítése.
