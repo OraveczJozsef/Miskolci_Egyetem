@@ -32,13 +32,13 @@ void init_fire(Fire* fire) {
     position.y = -0.03f;
     position.z = 0.4f;
 
-    add_fire(fire, 0, 0.0f, 2.0f, position);
+    add_fire(fire, 0, 0.0f, 0.0f, position);
     
-    position.x = -1.861721f;
+    /*position.x = -1.861721f;
     position.y = -1.509007f;
     position.z = 0.3f;
 
-    add_fire(fire, 0, 0.0f, 2.0f, position);
+    add_fire(fire, 0, 0.0f, 2.0f, position);*/
 }
 
 void add_texture(Fire* fire, char* src) {

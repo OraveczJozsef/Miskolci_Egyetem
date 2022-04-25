@@ -53,4 +53,5 @@ Mkfile.old
 dkms.conf
 .vscode/settings.json
 .vscode/c_cpp_properties.json
-*.psd
+
+#*.psd
