@@ -120,7 +120,7 @@ void handle_app_events(App* app) {
                     case SDL_SCANCODE_Q:
                         position = app->camera.position;
                         position.z -= 0.75f;
-                        add_fire(&(app->scene.fire), 0, 0, 0, position);
+                        add_fire(&(app->scene.fire), 0, 0, 2.0f, position);
                         break;
                     case SDL_SCANCODE_ESCAPE:
                         app->is_running = false;
