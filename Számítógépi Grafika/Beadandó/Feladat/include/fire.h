@@ -48,12 +48,14 @@
     /**
      * Inserts the fire data into an array.
      */
-    void add_fire(Fire* fire, int texture_actual, float time, float radius, vec3 position, vec3 rotation);
+    void add_fire(Fire* fire, int texture_actual, float time, float radius, vec3 position);
 
     /**
      * Update the fire.
      */
-    void update_fire(Fire* fire, double time);
+    void update_fire_texture(Fire* fire, double time);
+    void update_fire_rotation(Fire* fire, vec3 camera_position);
+    void update_fire_effect(Fire* fire, vec3 camera_position);
 
     /**
      * Render the fire.

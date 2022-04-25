@@ -111,6 +111,8 @@
      */
     void update_scene(Scene* scene, double time);
 
+    void update_fire(Scene* scene, vec3 camera_position);
+
     /**
      * Render the scene objects.
      */

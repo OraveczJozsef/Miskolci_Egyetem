@@ -2,7 +2,6 @@
 
 void init_fire(Fire* fire) {
     vec3 position;
-    vec3 rotation;
 
     fire->texture_size = 1;
     fire->texture_used = 0;
@@ -32,18 +31,14 @@ void init_fire(Fire* fire) {
     position.x = 5.8f;
     position.y = -0.03f;
     position.z = 0.4f;
-    
-    rotation.x = 90.0f;
-    rotation.y = 0.0f;
-    rotation.z = 0.0f;
 
-    add_fire(fire, 0, 0.0f, 2.0f, position, rotation);
+    add_fire(fire, 0, 0.0f, 2.0f, position);
     
     position.x = -1.861721f;
     position.y = -1.509007f;
     position.z = 0.3f;
 
-    add_fire(fire, 0, 0.0f, 2.0f, position, rotation);
+    add_fire(fire, 0, 0.0f, 2.0f, position);
 }
 
 void add_texture(Fire* fire, char* src) {
@@ -56,7 +51,7 @@ void add_texture(Fire* fire, char* src) {
     fire->texture_used++;
 }
 
-void add_fire(Fire* fire, int texture_actual, float time, float radius, vec3 position, vec3 rotation) {
+void add_fire(Fire* fire, int texture_actual, float time, float radius, vec3 position) {
     if (fire->fire_data_size == fire->fire_data_used) {
         fire->fire_data_size++;
         fire->fire_data = realloc(fire->fire_data, fire->fire_data_size * sizeof(FireData));
@@ -67,12 +62,15 @@ void add_fire(Fire* fire, int texture_actual, float time, float radius, vec3 pos
     fire->fire_data[fire->fire_data_used].radius = radius;
 
     fire->fire_data[fire->fire_data_used].position = position;
-    fire->fire_data[fire->fire_data_used].rotation = rotation;
+
+    fire->fire_data[fire->fire_data_used].rotation.x = 90.0f;
+    fire->fire_data[fire->fire_data_used].rotation.y = 0.0f;
+    fire->fire_data[fire->fire_data_used].rotation.z = 0.0f;
 
     fire->fire_data_used++;
 }
 
-void update_fire(Fire* fire, double time) {
+void update_fire_texture(Fire* fire, double time) {
     int i;
 
     for (i = 0; i < fire->fire_data_used; i++) {
@@ -85,6 +83,67 @@ void update_fire(Fire* fire, double time) {
     }
 }
 
+void update_fire_rotation(Fire* fire, vec3 camera_position) {
+    int i;
+
+    vec2 cam_pos;
+    vec2 fire_pos;
+    vec2 eye;
+
+    float rotate, angle;
+
+    cam_pos.x = camera_position.x;
+    cam_pos.y = camera_position.y;
+
+    for (i = 0; i < fire->fire_data_used; i++) {
+        fire_pos.x = fire->fire_data[i].position.x;
+        fire_pos.y = fire->fire_data[i].position.y;
+
+        eye.x = cam_pos.x - fire_pos.x;
+        eye.y = cam_pos.y - fire_pos.y;
+
+        eye = normalize_vec2(eye);
+
+        rotate = eye.x * 0.0f + eye.y * -1.0f;
+
+        if (cam_pos.x < fire_pos.x) {
+            angle = acosf(-rotate);
+            angle += M_PI;
+        } else {
+            angle = acosf(rotate);
+        }
+
+        angle = angle * 180 / M_PI;
+
+        fire->fire_data[i].rotation.y = angle;
+    }
+}
+
+void update_fire_effect(Fire* fire, vec3 camera_position) {
+    int i;
+
+    float distance;
+
+    fire->fire_effect = false;
+
+    for (i = 0; i < fire->fire_data_used; i++) {
+        distance = sqrt(pow(fabs(fire->fire_data[i].position.x - camera_position.x), 2) + pow(fabs(fire->fire_data[i].position.y - camera_position.y), 2));
+    
+        if (distance <= fire->fire_data[i].radius) {
+            fire->fire_effect = true;
+
+            if (distance < 1.0f) {
+                distance = 1.0f;
+            }
+
+            fire->fire_effect_rgba.red = 0.7f;
+            fire->fire_effect_rgba.green = 0.31f;
+            fire->fire_effect_rgba.blue = 0.31f;
+            fire->fire_effect_rgba.alpha = 0.75f / distance;
+            break;
+        }
+    }
+}
 
 void render_fire(const Fire* fire) {
     int i;

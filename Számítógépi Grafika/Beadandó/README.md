@@ -1,17 +1,57 @@
 # Féléves feladat [[Vissza](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pi%20Grafika)]
-## Feladat leírás:
+## Feladatról
+### Feladat rövid leírása:
+- A feladatomban szerettem volna elkészíteni egy szobát, amiben lehet mozogni, van egy ablakot, ami át tetsző, több különböző fényforrások kezelése, egy kandalló, amiben lobog egy tűz.
+
+### Modellek:
+```diff
+! A modelleket nem én készitettem !
+```
+
+### A feladatomban ezeket érdemes megtekinteni:
+- Ablak (áttetszőség)
+
+- Különböző fényforrások (játék a fényekkel):
+- - A végtelenben lévő fényforrás
+- - A szobában található fényforrások (2 darab, lámpa modellek), ezek állítható fényerőségűek
+- - A kandallóbal lobogó tűz fénye
+
+-	A tűzek:
+- - A ’Q’ betű megnyomásával új tűzett lehet lerakni a kamera pozíciójára (dinamikus tömbkezelés)
+- - Minden tűz egymástól független animációval rendelkezik. (8 darab betöltött textura közül választ egyet random, ez a tömb bővíthető mivel dinamikus tömb)
+- - Miden tűz függetlenül egymástól, mindig a kamera felé néz
+- - Ha közeledünk egy tűzforrás fellé akkor egy tűz effekt jelenik meg, a távolság függvényében erősebb vagy éppen gyengébb ez a hatás.
+
+- Ütközés vizsgálat (Egyszerűbb négyzetes megoldás)
+- A modellek dinamikus tömbben vannak eltárolva
+- Ha indításkor bemeneti paraméterként adjuk meg a következőt "-dev", akkor a fejlesztői módban indul el, ami a következőket takarja:
+- - Noclip (nincs ütközés vizsgálat)
+- - Az egér jobb gomb lenyomására kiírja a kamera adatait (Position / Rotation) a konzolra.
+
+### A billentyűzetkiosztás:
+| Billentyűzet  | Magyarázat  |
+|---|---|
+| W, A, S, D | Kamera mozgása  |
+| Egér bal gombja | Kamera forgása |
+| Jobb és bal shift | Gyorsabb mozgás |
+| Jobb és bal ctrl | Lassabb mozgás |
+| Q | Adott kamera pozícióra új tűz létrehozása |
+| Numpad + / - | Szobában lévő fényforrások fényerejének változtatása |
+| F1 | "Játékon" belüli segédpanel |
+| Esc | Program leállítása |
 
 
+# Feladat
 ## Minimális elvárások az elkészített programmal szemben
 
 > - ***Az elkészített programnak jól strukturáltnak, következetesnek kell lennie. Törekedni kell arra, hogy a modellek, a kezelés kidolgozott, a megjelenítés esztétikus legyen. Ezek a minimális elvárások a programmal szemben. Amennyiben ezek teljesülnek, úgy a feladat már elégséges.***
 
-> - [x] **Kamerakezelés:** *A virtuális teret az egér és/vagy billentyűzet segítségével be kell tudni járni.*
-> - [x] **Objektumok:** *Térbeli objektumok legyenek. Ezeket, mint modelleket külön fájlból lehessen betölteni.*
+> - [ ] **Kamerakezelés:** *A virtuális teret az egér és/vagy billentyűzet segítségével be kell tudni járni.*
+> - [ ] **Objektumok:** *Térbeli objektumok legyenek. Ezeket, mint modelleket külön fájlból lehessen betölteni.*
 > - [ ] **Animáció, mozgatás:** *A program legyen interaktív. A modelleket, fényeket billentyűzettel, egérrel lehessen mozgatni; legyenek animált részek.*
-> - [x] **Textúrák:** *A modelleknek legyen textúrája.*
-> - [x] **Fények:** *A programban a fényeket a + és - billentyűk segítségével lehessen állítani (vagy egyéb kézenfekvő módon a program leírása alapján).*
-> - [x] **Használati útmutató:** *Az F1 gomb megnyomására (vagy egyéb kézenfekvő módon) jelenjen megy egy leírás a programról, annak használatáról, kezelési módjáról.*
+> - [ ] **Textúrák:** *A modelleknek legyen textúrája.*
+> - [ ] **Fények:** *A programban a fényeket a + és - billentyűk segítségével lehessen állítani (vagy egyéb kézenfekvő módon a program leírása alapján).*
+> - [ ] **Használati útmutató:** *Az F1 gomb megnyomására (vagy egyéb kézenfekvő módon) jelenjen megy egy leírás a programról, annak használatáról, kezelési módjáról.*
 
 ## Többlet funkciók
 > - ***A jobb jegyért például az alábbi dolgokat lehet a programban megvalósítani.***
@@ -22,9 +62,9 @@
 > - [ ] **Részecskerendszerek:** *Például Tűz, füst, eső, hóesés.*
 > - [ ] **AI:** *Táblás játékok esetén kézenfekvő, egyéb játékoknál ellenfelek vezérlése például.*
 > - [ ] **Köd:** *Köd hatás megvalósítása, dinamikus változtatása.*
-> - [x] **Átlátszóság:** *Átlátszó részeket tartalmazó textúrák alkalmazása, félig áttetsző részek a megjelenített objektumokon.*
+> - [ ] **Átlátszóság:** *Átlátszó részeket tartalmazó textúrák alkalmazása, félig áttetsző részek a megjelenített objektumokon.*
 > - [ ] **Árnyék:** *Árnyékszerű hatások létrehozása.*
-> - [x] **Ütközésvizsgálat:** *Bounding-box implementáció valamilyen formája.*
+> - [ ] **Ütközésvizsgálat:** *Bounding-box implementáció valamilyen formája.*
 > - [ ] **Stencil buffer használata:** *Nem téglalap alakú képterületek megvalósításához.*
 > - [ ] **Felhasználói felület:** *A paraméterek állításához külön felületi elemek.*
 > - [ ] **Objektumok kijelölése egérrel:** *A megjelenített objektumok kijelölése.*

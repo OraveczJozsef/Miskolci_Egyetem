@@ -2,8 +2,7 @@
 
 #include <SDL2/SDL_image.h>
 
-void init_app(App* app, int width, int height)
-{
+void init_app(App* app, int width, int height) {
     int error_code;
     int inited_loaders;
 
@@ -105,19 +104,24 @@ void reshape(GLsizei width, GLsizei height)
     );
 }
 
-void handle_app_events(App* app)
-{
+void handle_app_events(App* app) {
     SDL_Event event;
     static bool is_mouse_down = false;
     static int mouse_x = 0;
     static int mouse_y = 0;
     int x;
     int y;
+    vec3 position;
 
     while (SDL_PollEvent(&event)) {
         switch (event.type) {
             case SDL_KEYDOWN:
                 switch (event.key.keysym.scancode) {
+                    case SDL_SCANCODE_Q:
+                        position = app->camera.position;
+                        position.z -= 0.75f;
+                        add_fire(&(app->scene.fire), 0, 0, 0, position);
+                        break;
                     case SDL_SCANCODE_ESCAPE:
                         app->is_running = false;
                         break;
@@ -234,66 +238,7 @@ void update_app(App* app) {
     update_scene(&(app->scene), elapsed_time);
 
     /* Fire */
-    update_fire_rotation(&(app->scene), &(app->camera));
-    update_fire_effect(&(app->scene), &(app->camera));
-}
-
-void update_fire_rotation(Scene* scene, Camera* camera) {
-    int i;
-    vec2 camera_position;
-    vec2 fire_position;
-    vec2 eye;
-    float rotation, angle;
-
-    camera_position.x = camera->position.x;
-    camera_position.y = camera->position.y;
-
-    for (i = 0; i < scene->fire.fire_data_used; i++) {
-        fire_position.x = scene->fire.fire_data[i].position.x;
-        fire_position.y = scene->fire.fire_data[i].position.y;
-
-        eye.x = camera_position.x - fire_position.x;
-        eye.y = camera_position.y - fire_position.y;
-
-        eye = normalize_vec2(eye);
-
-        rotation = eye.x * 0.0f + eye.y * -1.0f;
-
-        if (camera_position.x < fire_position.x) {
-            angle = acosf(-rotation);
-            angle += M_PI;
-        } else {
-            angle = acosf(rotation);
-        }
-
-        angle = angle * 180 / M_PI;
-
-        scene->fire.fire_data[i].rotation.y = angle;
-    }
-}
-
-void update_fire_effect(Scene* scene, Camera* camera) {
-    int i;
-    float distance;
-    scene->fire.fire_effect = false;
-
-    for (i = 0; i < scene->fire.fire_data_used; i++) {
-        distance = sqrt(pow(fabs(scene->fire.fire_data[i].position.x - camera->position.x), 2) + pow(fabs(scene->fire.fire_data[i].position.y - camera->position.y), 2));
-        
-        if (distance <= scene->fire.fire_data[i].radius) {
-            scene->fire.fire_effect = true;
-
-            if (distance < 1.0f) {
-                distance = 1.0f;
-            }
-    
-            scene->fire.fire_effect_rgba.red = 0.7f;
-            scene->fire.fire_effect_rgba.green = 0.31f;
-            scene->fire.fire_effect_rgba.blue = 0.31f;
-            scene->fire.fire_effect_rgba.alpha = 0.75f / distance;
-            break;
-        }
-    }
+    update_fire(&(app->scene), app->camera.position);
 }
 
 void render_app(App* app) {

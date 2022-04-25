@@ -178,7 +178,12 @@ void update_scene(Scene* scene, double time) {
     }
 
     /* Fire Texture */
-    update_fire(&(scene->fire), time);
+    update_fire_texture(&(scene->fire), time);
+}
+
+void update_fire(Scene* scene, vec3 camera_position) {
+    update_fire_rotation(&(scene->fire), camera_position);
+    update_fire_effect(&(scene->fire), camera_position);
 }
 
 void render_scene(const Scene* scene) {
