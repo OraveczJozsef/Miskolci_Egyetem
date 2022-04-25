@@ -5,7 +5,7 @@
 
 ### Modellek:
 ```diff
-! A modelleket nem én készitettem !
+! A modelleket nem én készítettem !
 ```
 
 ### A feladatomban ezeket érdemes megtekinteni:
