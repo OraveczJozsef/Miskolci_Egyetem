@@ -16,7 +16,7 @@
 
 ## Tantárgyak
 ### I. Félév
-> [Programozás Alapjai](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Programoz%C3%A1s%20Alapjai) (I. Félév) [🛠]
+> [Programozás Alapjai](https://github.com/OraveczJozsef/Miskolci_Egyetem/tree/main/Programoz%C3%A1s%20Alapjai) (I. Félév) [⌛]
 ----
 
 ### II. Félév
