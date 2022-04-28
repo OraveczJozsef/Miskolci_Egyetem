@@ -128,18 +128,19 @@ void update_fire_effect(Fire* fire, vec3 camera_position) {
 
     for (i = 0; i < fire->fire_data_used; i++) {
         distance = sqrt(pow(fabs(fire->fire_data[i].position.x - camera_position.x), 2) + pow(fabs(fire->fire_data[i].position.y - camera_position.y), 2));
-    
+        
         if (distance <= fire->fire_data[i].radius) {
             fire->fire_effect = true;
 
-            if (distance < 1.0f) {
-                distance = 1.0f;
+            if (distance < 0.9f) {
+                distance = 0.9f;
             }
 
             fire->fire_effect_rgba.red = 0.7f;
             fire->fire_effect_rgba.green = 0.31f;
             fire->fire_effect_rgba.blue = 0.31f;
             fire->fire_effect_rgba.alpha = 0.75f / distance;
+            
             break;
         }
     }
